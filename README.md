@@ -208,7 +208,7 @@ aesthetic_css_framework/
 ├── src/
 │   ├── base/
 │   │   ├── _reset.scss          # Luz Helena
-│   │   ├── _typography.scss     # David Base typography = Base styling for HTML elements
+│   │   ├── _typography.scss     # David - Base typography styling for HTML elements
 │   │   ├── _buttons.scss        # Solomon
 │   │   ├── _forms.scss          # Chuhong
 │   │   ├── _tables.scss         # Chuhong
@@ -217,22 +217,27 @@ aesthetic_css_framework/
 │   │   └── _layout.scss         # Luz Helena
 │   ├── utilities/
 │   │   ├── _colors.scss         # Solomon
-│   │   ├── _typography.scss     # Solomon Typography utilities = Utility classes for font weights and text styling
+│   │   ├── _typography.scss     # Solomon - Typography utilities for font weights and text styling
 │   │   ├── _font-sizes.scss     # Luz Helena
 │   │   ├── _margin.scss         # Chuhong
 │   │   ├── _padding.scss        # Chuhong
 │   │   ├── _borders.scss        # Solomon
 │   │   └── _display.scss        # Luz Helena
 │   ├── variables/
-│   │   ├── _config.scss         # David
-│   │   └── _colors.scss         # David
-│   └── main.scss                # David
-├── dist/ (distribution folder)
-│   └── aesthetic.css            # Compiled output
+│   │   ├── _config.scss         # David - Configuration variables
+│   │   └── _colors.scss         # David - Color system variables
+│   └── aesthetic.scss           # David - Main entry point (renamed from main.scss)
+├── .vscode/
+│   └── settings.json            # VS Code Sass compiler configuration
+├── dist/                        # Distribution folder (auto-generated)
+│   ├── aesthetic.css            # Compiled CSS output
+│   ├── aesthetic.min.css        # Minified CSS output
+│   └── aesthetic.css.map        # Source map for debugging
 ├── examples/
-│   └── demo.html                # David
-│                # David
-└── README.md
+│   └── demo.html                # David - Demo showcase file
+├── instructions.md              # David - Team workflow guide
+│
+└── README.md                    # David - Project documentation
 ```
 
 ## Development
@@ -281,3 +286,8 @@ This project is licensed under the MIT License.
 - Sass variable system for easy customization
 - Responsive design principles
 - Complete documentation and examples
+### Key Changes in v1.0.1:
+- **Renamed** `main.scss` → `aesthetic.scss` for consistent naming
+- **Added** `.vscode/settings.json` for Sass compiler configuration
+- **Enhanced** build system with proper CSS output naming
+- **Improved** development workflow with VS Code integration
