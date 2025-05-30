@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aesthetic CSS Framework - Demo</title>
+    <!-- Link to the compiled CSS framework -->
+    <link rel="stylesheet" href="../dist/aesthetic.css">
+    <style>
+        /* Demo-specific styles */
+        .demo-section {
+            margin-bottom: 3rem;
+            padding: 2rem;
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+        }
+        .demo-section h2 {
+            color: #007bff;
+            border-bottom: 2px solid #007bff;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .color-demo {
+            display: inline-block;
+            width: 100px;
+            height: 50px;
+            margin: 0.5rem;
+            text-align: center;
+            line-height: 50px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Section -->
+    <div class="container">
+        <header class="text-center py-5">
+            <h1 class="text-primary">Aesthetic CSS Framework</h1>
+            <p class="text-lg text-muted">A beautiful, lightweight CSS framework built with Sass</p>
+        </header>
+
+        <!-- Typography Demo -->
+        <section class="demo-section">
+            <h2>Typography</h2>
+            <div class="row">
+                <div class="col-6">
+                    <h3>Headings</h3>
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2</h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+                </div>
+                <div class="col-6">
+                    <h3>Text Elements</h3>
+                    <p>This is a regular paragraph with some <strong>bold text</strong> and <em>italic text</em>.</p>
+                    <p><small>This is small text</small></p>
+                    <p><mark>This is highlighted text</mark></p>
+                    <p><del>This text is deleted</del></p>
+                    <p><ins>This text is inserted</ins></p>
+                    <p class="text-muted">This is muted text</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Font Size Utilities Demo -->
+        <section class="demo-section">
+            <h2>Font Size Utilities</h2>
+            <p class="text-xs">Extra small text (.text-xs)</p>
+            <p class="text-sm">Small text (.text-sm)</p>
+            <p class="text-md">Medium text (.text-md)</p>
+            <p class="text-lg">Large text (.text-lg)</p>
+            <p class="text-xl">Extra large text (.text-xl)</p>
+            <p class="text-xxl">Extra extra large text (.text-xxl)</p>
+        </section>
+
+        <!-- Typography Utilities Demo -->
+        <section class="demo-section">
+            <h2>Typography Utilities</h2>
+            <div class="row">
+                <div class="col-4">
+                    <h3>Font Weights</h3>
+                    <p class="font-light">Light text (.font-light)</p>
+                    <p class="font-normal">Normal text (.font-normal)</p>
+                    <p class="font-bold">Bold text (.font-bold)</p>
+                </div>
+                <div class="col-4">
+                    <h3>Text Transform</h3>
+                    <p class="text-lowercase">LOWERCASE TEXT (.text-lowercase)</p>
+                    <p class="text-uppercase">uppercase text (.text-uppercase)</p>
+                    <p class="text-capitalize">capitalize text (.text-capitalize)</p>
+                </div>
+                <div class="col-4">
+                    <h3>Text Alignment</h3>
+                    <p class="text-left">Left aligned text</p>
+                    <p class="text-center">Center aligned text</p>
+                    <p class="text-right">Right aligned text</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Color Utilities Demo -->
+        <section class="demo-section">
+            <h2>Color Utilities</h2>
+            <div class="row">
+                <div class="col-6">
+                    <h3>Text Colors</h3>
+                    <p class="text-primary">Primary text color</p>
+                    <p class="text-secondary">Secondary text color</p>
+                    <p class="text-success">Success text color</p>
+                    <p class="text-danger">Danger text color</p>
+                    <p class="text-warning">Warning text color</p>
+                    <p class="text-info">Info text color</p>
+                    <p class="text-dark">Dark text color</p>
+                    <p class="text-muted">Muted text color</p>
+                </div>
+                <div class="col-6">
+                    <h3>Background Colors</h3>
+                    <div class="bg-primary color-demo text-white">Primary</div>
+                    <div class="bg-secondary color-demo text-white">Secondary</div>
+                    <div class="bg-success color-demo text-white">Success</div>
+                    <div class="bg-danger color-demo text-white">Danger</div>
+                    <div class="bg-warning color-demo text-dark">Warning</div>
+                    <div class="bg-info color-demo text-white">Info</div>
+                    <div class="bg-light color-demo text-dark">Light</div>
+                    <div class="bg-dark color-demo text-white">Dark</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons Demo -->
+        <section class="demo-section">
+            <h2>Buttons</h2>
+            <div class="row">
+                <div class="col-6">
+                    <h3>Button Colors</h3>
+                    <button class="btn btn-primary">Primary</button>
+                    <button class="btn btn-secondary">Secondary</button>
+                    <button class="btn btn-success">Success</button>
+                    <button class="btn btn-danger">Danger</button>
+                    <button class="btn btn-warning">Warning</button>
+                    <button class="btn btn-info">Info</button>
+                </div>
+                <div class="col-6">
+                    <h3>Button Sizes & States</h3>
+                    <button class="btn btn-primary btn-sm">Small</button>
+                    <button class="btn btn-primary">Normal</button>
+                    <button class="btn btn-primary btn-lg">Large</button>
+                    <br><br>
+                    <button class="btn btn-outline-primary">Outline</button>
+                    <button class="btn btn-primary" disabled>Disabled</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms Demo -->
+        <section class="demo-section">
+            <h2>Forms</h2>
+            <div class="row">
+                <div class="col-6">
+                    <h3>Form Elements</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter email">
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <input type="password" class="form-control" id="password" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="country">Country</label>
+                            <select class="form-control" id="country">
+                                <option>Select a country</option>
+                                <option>United States</option>
+                                <option>Canada</option>
+                                <option>Mexico</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-6">
+                    <h3>Checkboxes & Radio</h3>
+                    <div class="form-group">
+                        <input type="checkbox" id="check1">
+                        <label for="check1">Option 1</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="checkbox" id="check2">
+                        <label for="check2">Option 2</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" id="radio1" name="options">
+                        <label for="radio1">Choice A</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="radio" id="radio2" name="options">
+                        <label for="radio2">Choice B</label>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tables Demo -->
+        <section class="demo-section">
+            <h2>Tables</h2>
+            <div class="row">
+                <div class="col-6">
+                    <h3>Basic Table</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>John Doe</td>
+                                <td>john@example.com</td>
+                                <td>Developer</td>
+                            </tr>
+                            <tr>
+                                <td>Jane Smith</td>
+                                <td>jane@example.com</td>
+                                <td>Designer</td>
+                            </tr>
+                            <tr>
+                                <td>Bob Johnson</td>
+                                <td>bob@example.com</td>
+                                <td>Manager</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-6">
+                    <h3>Striped Table</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Price</th>
+                                <th>Stock</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Laptop</td>
+                                <td>$999</td>
+                                <td>15</td>
+                            </tr>
+                            <tr>
+                                <td>Mouse</td>
+                                <td>$25</td>
+                                <td>50</td>
+                            </tr>
+                            <tr>
+                                <td>Keyboard</td>
+                                <td>$75</td>
+                                <td>30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lists Demo -->
+        <section class="demo-section">
+            <h2>Lists</h2>
+            <div class="row">
+                <div class="col-4">
+                    <h3>Unordered List</h3>
+                    <ul>
+                        <li>First item</li>
+                        <li>Second item</li>
+                        <li>Third item</li>
+                    </ul>
+                </div>
+                <div class="col-4">
+                    <h3>Ordered List</h3>
+                    <ol>
+                        <li>First step</li>
+                        <li>Second step</li>
+                        <li>Third step</li>
+                    </ol>
+                </div>
+                <div class="col-4">
+                    <h3>List Group</h3>
+                    <ul class="list-group">
+                        <li class="list-group-item">First item</li>
+                        <li class="list-group-item">Second item</li>
+                        <li class="list-group-item">Third item</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Spacing Utilities Demo -->
+        <section class="demo-section">
+            <h2>Spacing Utilities</h2>
+            <div class="row">
+                <div class="col-6">
+                    <h3>Margin Examples</h3>
+                    <div class="bg-light p-2 m-1">Margin 1 (.m-1)</div>
+                    <div class="bg-light p-2 m-2">Margin 2 (.m-2)</div>
+                    <div class="bg-light p-2 m-3">Margin 3 (.m-3)</div>
+                </div>
+                <div class="col-6">
+                    <h3>Padding Examples</h3>
+                    <div class="bg-light p-1">Padding 1 (.p-1)</div>
+                    <div class="bg-light p-2">Padding 2 (.p-2)</div>
+                    <div class="bg-light p-3">Padding 3 (.p-3)</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Display Utilities Demo -->
+        <section class="demo-section">
+            <h2>Display Utilities</h2>
+            <h3>Flexbox Layout</h3>
+            <div class="d-flex justify-content-between align-items-center bg-light p-3">
+                <div>Left item</div>
+                <div>Center item</div>
+                <div>Right item</div>
+            </div>
+            
+            <h3 class="mt-3">Flex Column</h3>
+            <div class="d-flex flex-column align-items-center bg-light p-3">
+                <div class="mb-2">Item 1</div>
+                <div class="mb-2">Item 2</div>
+                <div>Item 3</div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="text-center py-4 mt-5 border-top">
+            <p class="text-muted">
+                Aesthetic CSS Framework Demo - 
+                Created by David Muñoz Jensen, Chuhong Feng, Solomon Tesfaye, and Luz Helena Rodriguez
+            </p>
+        </footer>
+    </div>
+</body>
+</html>

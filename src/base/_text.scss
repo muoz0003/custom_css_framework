@@ -1,0 +1,84 @@
+// =============================================================================
+// TEXT STYLING - Solomon's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables (David will create these)
+// @import '../variables/config';
+// @import '../variables/colors';
+
+// Step 2: Style basic text elements
+// TODO: Add styles for:
+// - p (paragraphs)
+// - a (links)
+// - strong, b (bold text)
+// - em, i (italic text)
+// - small (small text)
+// - mark (highlighted text)
+// - del, s (strikethrough text)
+// - ins, u (underlined text)
+
+// Step 3: Create text utility classes
+// TODO: Add classes for:
+// - .text-left (align text left)
+// - .text-center (align text center)
+// - .text-right (align text right)
+// - .text-justify (justify text)
+
+// Step 4: Create text color classes
+// TODO: Add classes for:
+// - .text-primary (primary color text)
+// - .text-secondary (secondary color text)
+// - .text-success (success color text)
+// - .text-danger (danger color text)
+// - .text-warning (warning color text)
+// - .text-info (info color text)
+// - .text-muted (muted/gray text)
+
+// Step 5: Create text transform classes
+// TODO: Add classes for:
+// - .text-lowercase (transform to lowercase)
+// - .text-uppercase (transform to uppercase)
+// - .text-capitalize (capitalize first letter of each word)
+
+// Step 6: Create text decoration classes
+// TODO: Add classes for:
+// - .text-decoration-none (remove underlines from links)
+// - .text-decoration-underline (add underline)
+// - .text-decoration-line-through (strikethrough)
+
+// Example structure:
+/*
+p {
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+a {
+  color: blue; // Use $primary-color later
+  text-decoration: none;
+  
+  &:hover {
+    text-decoration: underline;
+    color: darkblue; // Use darker shade later
+  }
+}
+
+strong, b {
+  font-weight: bold;
+}
+
+.text-primary {
+  color: blue !important; // Use $primary-color later
+}
+
+.text-center {
+  text-align: center !important;
+}
+*/
+
+// NOTES:
+// - Wait for David to create variables before using them
+// - Make sure links have good hover states
+// - Test with different text content and lengths
+// - Ensure text colors have good contrast for accessibility
+// - Use !important on utility classes to ensure they override other styles

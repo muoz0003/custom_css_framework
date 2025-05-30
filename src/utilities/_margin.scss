@@ -1,0 +1,62 @@
+// =============================================================================
+// MARGIN UTILITIES - Chuhong's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables (David will create these)
+// @import '../variables/config';
+// @import '../variables/colors';
+
+// Step 2: Create basic margin utilities
+// TODO: Add classes for:
+// - .m-0, .m-1, .m-2, .m-3, .m-4, .m-5 (all sides margin)
+// - Use the $spacers map from config for consistent spacing
+
+// Step 3: Create directional margin utilities
+// TODO: Add classes for:
+// - .mt-0 through .mt-5 (margin-top)
+// - .mb-0 through .mb-5 (margin-bottom)
+// - .ml-0 through .ml-5 (margin-left)
+// - .mr-0 through .mr-5 (margin-right)
+
+// Step 4: Create axis margin utilities
+// TODO: Add classes for:
+// - .mx-0 through .mx-5 (margin left and right)
+// - .my-0 through .my-5 (margin top and bottom)
+
+// Step 5: Create auto margin utilities
+// TODO: Add classes for:
+// - .m-auto (margin auto all sides)
+// - .mx-auto (margin auto left and right - for centering)
+// - .mt-auto, .mb-auto, .ml-auto, .mr-auto (directional auto margins)
+
+// Example structure:
+/*
+.m-0 {
+  margin: 0 !important;
+}
+
+.m-1 {
+  margin: 0.25rem !important; // Use $spacers map value later
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important; // Use $spacers map value later
+}
+
+.mx-3 {
+  margin-left: 1rem !important; // Use $spacers map value later
+  margin-right: 1rem !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+*/
+
+// NOTES:
+// - Wait for David to create variables and $spacers map before using them
+// - Use !important to ensure utility classes override other styles
+// - Test with different elements to ensure proper spacing
+// - mx-auto is commonly used for centering elements
+// - Consider creating a loop to generate classes from $spacers map

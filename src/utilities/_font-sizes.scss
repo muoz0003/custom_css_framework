@@ -1,0 +1,60 @@
+// =============================================================================
+// FONT SIZE UTILITIES - Luz Helena's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables (David will create these)
+// @import '../variables/config';
+// @import '../variables/colors';
+
+// Step 2: Create basic font size utilities
+// TODO: Add classes for:
+// - .text-xs (extra small text)
+// - .text-sm (small text)
+// - .text-md (medium/base text)
+// - .text-lg (large text)
+// - .text-xl (extra large text)
+// - .text-xxl (extra extra large text)
+
+// Step 3: Create heading size utilities
+// TODO: Add classes for:
+// - .h1 (h1 size without h1 semantics)
+// - .h2 (h2 size without h2 semantics)
+// - .h3 (h3 size without h3 semantics)
+// - .h4 (h4 size without h4 semantics)
+// - .h5 (h5 size without h5 semantics)
+// - .h6 (h6 size without h6 semantics)
+
+// Step 4: Create responsive font size utilities (optional)
+// TODO: Add classes for:
+// - .text-sm-lg (small on mobile, large on desktop)
+// - .text-responsive (scales with screen size)
+
+// Example structure:
+/*
+.text-xs {
+  font-size: 0.75rem !important; // Use $font-size-xs later
+}
+
+.text-sm {
+  font-size: 0.875rem !important; // Use $font-size-sm later
+}
+
+.text-lg {
+  font-size: 1.125rem !important; // Use $font-size-lg later
+}
+
+.h1 {
+  font-size: 2.5rem !important; // Use $h1-font-size later
+}
+
+.h2 {
+  font-size: 2rem !important; // Use $h2-font-size later
+}
+*/
+
+// NOTES:
+// - Wait for David to create variables before using them
+// - Use !important to ensure utility classes override other styles
+// - These classes change font size without changing semantic meaning
+// - Test with different content to ensure readability
+// - Consider responsive behavior for better mobile experience

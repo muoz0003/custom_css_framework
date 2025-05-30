@@ -1,0 +1,67 @@
+// =============================================================================
+// TYPOGRAPHY UTILITIES - Solomon's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables (David will create these)
+// @import '../variables/config';
+// @import '../variables/colors';
+
+// Step 2: Create font weight utilities
+// TODO: Add classes for:
+// - .font-light (light font weight)
+// - .font-normal (normal font weight)
+// - .font-medium (medium font weight)
+// - .font-bold (bold font weight)
+
+// Step 3: Create text transform utilities
+// TODO: Add classes for:
+// - .text-lowercase (transform to lowercase)
+// - .text-uppercase (transform to uppercase)
+// - .text-capitalize (capitalize first letter of each word)
+
+// Step 4: Create text decoration utilities
+// TODO: Add classes for:
+// - .text-decoration-none (remove underlines)
+// - .text-decoration-underline (add underline)
+// - .text-decoration-line-through (strikethrough)
+
+// Step 5: Create text style utilities
+// TODO: Add classes for:
+// - .font-italic (italic text)
+// - .font-normal-style (remove italic)
+// - .text-nowrap (prevent text wrapping)
+// - .text-truncate (truncate long text with ellipsis)
+
+// Example structure:
+/*
+.font-light {
+  font-weight: 300 !important; // Use $font-weight-light later
+}
+
+.font-normal {
+  font-weight: 400 !important; // Use $font-weight-normal later
+}
+
+.font-bold {
+  font-weight: 700 !important; // Use $font-weight-bold later
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-decoration-none {
+  text-decoration: none !important;
+}
+*/
+
+// NOTES:
+// - Wait for David to create variables before using them
+// - Use !important to ensure utility classes override other styles
+// - These are different from base typography (this is for utility classes)
+// - Test with different text content to ensure they work properly
+// - Focus on commonly needed text styling utilities

@@ -1,0 +1,78 @@
+// =============================================================================
+// TABLES STYLING - Chuhong's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables (David will create these)
+// @import '../variables/config';
+// @import '../variables/colors';
+
+// Step 2: Style basic table elements
+// TODO: Add styles for:
+// - table (basic table styling)
+// - th, td (table headers and cells)
+// - Basic properties: padding, border, text-align
+// - Border-collapse for clean borders
+
+// Step 3: Create table variants
+// TODO: Add classes for:
+// - .table (base table class)
+// - .table-striped (alternating row colors)
+// - .table-bordered (borders around all cells)
+// - .table-hover (hover effect on rows)
+
+// Step 4: Create table sizes
+// TODO: Add classes for:
+// - .table-sm (smaller padding)
+// - .table-lg (larger padding)
+
+// Step 5: Create table colors
+// TODO: Add classes for:
+// - .table-primary (primary colored header)
+// - .table-secondary (secondary colored header)
+// - .table-success (success colored rows)
+// - .table-danger (danger colored rows)
+
+// Step 6: Style responsive tables
+// TODO: Add class for:
+// - .table-responsive (horizontal scroll on small screens)
+
+// Example structure:
+/*
+table,
+.table {
+  // Base table styles here
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border-top: 1px solid #dee2e6;
+  text-align: left;
+}
+
+th {
+  background-color: #f8f9fa;
+  font-weight: bold;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.table-striped {
+  tbody tr:nth-of-type(odd) {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+}
+
+.table-hover {
+  tbody tr:hover {
+    background-color: rgba(0, 0, 0, 0.075);
+  }
+}
+*/
+
+// NOTES:
+// - Wait for David to create variables before using them
+// - Make sure tables are readable and well-organized
+// - Use consistent spacing and colors with the rest of the framework

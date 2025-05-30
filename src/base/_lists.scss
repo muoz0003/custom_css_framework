@@ -1,0 +1,83 @@
+// =============================================================================
+// LISTS STYLING - Chuhong's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables (David will create these)
+// @import '../variables/config';
+// @import '../variables/colors';
+
+// Step 2: Style basic list elements
+// TODO: Add styles for:
+// - ul, ol (unordered and ordered lists)
+// - li (list items)
+// - dl, dt, dd (definition lists)
+// - Basic properties: margin, padding, list-style
+
+// Step 3: Create list variants
+// TODO: Add classes for:
+// - .list-unstyled (removes bullets/numbers and padding)
+// - .list-inline (horizontal list items)
+// - .list-group (styled list with borders)
+// - .list-group-item (individual list group items)
+
+// Step 4: Create list group variants
+// TODO: Add classes for:
+// - .list-group-item-primary (primary colored list item)
+// - .list-group-item-success (success colored list item)
+// - .list-group-item-warning (warning colored list item)
+// - .list-group-item-danger (danger colored list item)
+
+// Step 5: Create interactive list items
+// TODO: Add classes for:
+// - .list-group-item-action (hover and active states)
+// - .active (active list item state)
+// - .disabled (disabled list item state)
+
+// Example structure:
+/*
+ul, ol {
+  margin: 0 0 1rem 0;
+  padding-left: 2rem;
+}
+
+li {
+  margin-bottom: 0.25rem;
+}
+
+.list-unstyled {
+  list-style: none;
+  padding-left: 0;
+}
+
+.list-inline {
+  list-style: none;
+  padding-left: 0;
+  
+  li {
+    display: inline-block;
+    margin-right: 1rem;
+  }
+}
+
+.list-group {
+  list-style: none;
+  padding-left: 0;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+}
+
+.list-group-item {
+  padding: 0.75rem;
+  border-bottom: 1px solid #dee2e6;
+  
+  &:last-child {
+    border-bottom: none;
+  }
+}
+*/
+
+// NOTES:
+// - Wait for David to create variables before using them
+// - Make sure lists are readable and well-spaced
+// - Consider different list styles (bullets, numbers, none)
+// - Ensure list-group works well with buttons and links

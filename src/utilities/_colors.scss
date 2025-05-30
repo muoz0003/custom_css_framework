@@ -1,0 +1,73 @@
+// =============================================================================
+// COLOR UTILITIES - Solomon's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables (David will create these)
+// @import '../variables/config';
+// @import '../variables/colors';
+
+// Step 2: Create text color utilities
+// TODO: Add classes for:
+// - .text-primary (primary color text)
+// - .text-secondary (secondary color text)
+// - .text-success (success color text)
+// - .text-danger (danger color text)
+// - .text-warning (warning color text)
+// - .text-info (info color text)
+// - .text-light (light color text)
+// - .text-dark (dark color text)
+// - .text-muted (muted/gray text)
+// - .text-white (white text)
+// - .text-black (black text)
+
+// Step 3: Create background color utilities
+// TODO: Add classes for:
+// - .bg-primary (primary background color)
+// - .bg-secondary (secondary background color)
+// - .bg-success (success background color)
+// - .bg-danger (danger background color)
+// - .bg-warning (warning background color)
+// - .bg-info (info background color)
+// - .bg-light (light background color)
+// - .bg-dark (dark background color)
+// - .bg-white (white background)
+// - .bg-transparent (transparent background)
+
+// Step 4: Create border color utilities
+// TODO: Add classes for:
+// - .border-primary (primary border color)
+// - .border-secondary (secondary border color)
+// - .border-success (success border color)
+// - .border-danger (danger border color)
+// - .border-warning (warning border color)
+// - .border-info (info border color)
+
+// Example structure:
+/*
+.text-primary {
+  color: blue !important; // Use $primary-color later
+}
+
+.text-success {
+  color: green !important; // Use $success-color later
+}
+
+.bg-primary {
+  background-color: blue !important; // Use $primary-color later
+}
+
+.bg-danger {
+  background-color: red !important; // Use $danger-color later
+}
+
+.border-primary {
+  border-color: blue !important; // Use $primary-color later
+}
+*/
+
+// NOTES:
+// - Wait for David to create variables before using them
+// - Use !important to ensure utility classes override other styles
+// - Test color combinations for accessibility (contrast)
+// - Consider adding hover states for interactive elements
+// - Make sure colors work well together across the framework

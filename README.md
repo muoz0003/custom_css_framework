@@ -208,7 +208,7 @@ aesthetic_css_framework/
 ├── src/
 │   ├── base/
 │   │   ├── _reset.scss          # Luz Helena
-│   │   ├── _typography.scss     # David
+│   │   ├── _typography.scss     # David Base typography = Base styling for HTML elements
 │   │   ├── _buttons.scss        # Solomon
 │   │   ├── _forms.scss          # Chuhong
 │   │   ├── _tables.scss         # Chuhong
@@ -217,7 +217,7 @@ aesthetic_css_framework/
 │   │   └── _layout.scss         # Luz Helena
 │   ├── utilities/
 │   │   ├── _colors.scss         # Solomon
-│   │   ├── _typography.scss     # Solomon
+│   │   ├── _typography.scss     # Solomon Typography utilities = Utility classes for font weights and text styling
 │   │   ├── _font-sizes.scss     # Luz Helena
 │   │   ├── _margin.scss         # Chuhong
 │   │   ├── _padding.scss        # Chuhong

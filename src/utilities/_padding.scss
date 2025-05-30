@@ -1,0 +1,56 @@
+// =============================================================================
+// PADDING UTILITIES - Chuhong's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables (David will create these)
+// @import '../variables/config';
+// @import '../variables/colors';
+
+// Step 2: Create basic padding utilities
+// TODO: Add classes for:
+// - .p-0, .p-1, .p-2, .p-3, .p-4, .p-5 (all sides padding)
+// - Use the $spacers map from config for consistent spacing
+
+// Step 3: Create directional padding utilities
+// TODO: Add classes for:
+// - .pt-0 through .pt-5 (padding-top)
+// - .pb-0 through .pb-5 (padding-bottom)
+// - .pl-0 through .pl-5 (padding-left)
+// - .pr-0 through .pr-5 (padding-right)
+
+// Step 4: Create axis padding utilities
+// TODO: Add classes for:
+// - .px-0 through .px-5 (padding left and right)
+// - .py-0 through .py-5 (padding top and bottom)
+
+// Example structure:
+/*
+.p-0 {
+  padding: 0 !important;
+}
+
+.p-1 {
+  padding: 0.25rem !important; // Use $spacers map value later
+}
+
+.pt-2 {
+  padding-top: 0.5rem !important; // Use $spacers map value later
+}
+
+.px-3 {
+  padding-left: 1rem !important; // Use $spacers map value later
+  padding-right: 1rem !important;
+}
+
+.py-4 {
+  padding-top: 1.5rem !important; // Use $spacers map value later
+  padding-bottom: 1.5rem !important;
+}
+*/
+
+// NOTES:
+// - Wait for David to create variables and $spacers map before using them
+// - Use !important to ensure utility classes override other styles
+// - Test with different elements to ensure proper spacing
+// - Padding affects the element's internal space (unlike margin)
+// - Consider creating a loop to generate classes from $spacers map

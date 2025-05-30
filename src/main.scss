@@ -1,0 +1,55 @@
+// =============================================================================
+// AESTHETIC CSS FRAMEWORK - MAIN ENTRY POINT
+// =============================================================================
+// A lightweight, customizable CSS framework built with Sass
+// Team: David Muñoz Jensen, Chuhong Feng, Solomon Tesfaye, Luz Helena Rodriguez
+// =============================================================================
+
+// 1. VARIABLES
+// =============================================================================
+// Import all variables first so they're available to all components
+@import 'variables/config';
+@import 'variables/colors';
+
+// 2. BASE STYLES
+// =============================================================================
+// Base styles for HTML elements - applied automatically
+
+// Reset and normalize (Luz Helena)
+@import 'base/reset';
+
+// Layout foundation (Luz Helena)  
+@import 'base/layout';
+
+// Typography and headings (David)
+@import 'base/typography';
+
+// Interactive elements (Solomon)
+@import 'base/buttons';
+@import 'base/text';
+
+// Form elements (Chuhong)
+@import 'base/forms';
+@import 'base/tables';
+@import 'base/lists';
+
+// 3. UTILITY CLASSES
+// =============================================================================
+// Utility classes for rapid development - applied with class names
+
+// Visual utilities (Solomon)
+@import 'utilities/colors';
+@import 'utilities/typography';
+@import 'utilities/borders';
+
+// Layout utilities (Luz Helena)
+@import 'utilities/display';
+@import 'utilities/font-sizes';
+
+// Spacing utilities (Chuhong)
+@import 'utilities/margin';
+@import 'utilities/padding';
+
+// =============================================================================
+// END OF AESTHETIC CSS FRAMEWORK
+// =============================================================================
