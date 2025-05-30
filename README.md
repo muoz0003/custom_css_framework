@@ -1,4 +1,4 @@
-# Custom CSS Framework
+# Aesthetic CSS Framework
 
 A lightweight, customizable CSS framework built with Sass that provides beautiful default styling for HTML elements and utility classes for rapid development.
 
@@ -13,7 +13,7 @@ A lightweight, customizable CSS framework built with Sass that provides beautifu
 - Base typography and headings (`src/base/_typography.scss`)
 - Final integration and testing
 - README documentation coordination
-- Demo/example HTML file creation (`examples/index.html`)
+- Demo/example HTML file creation (`examples/demo.html`)
 
 ### Chuhong Feng - GitHub: [philagoodday](https://github.com/philagoodday)
 **Responsibilities:**
@@ -44,13 +44,12 @@ A lightweight, customizable CSS framework built with Sass that provides beautifu
   - Font size utilities (`src/utilities/_font-sizes.scss`)
   - Display utilities (`src/utilities/_display.scss`)
 
-
 ## Features
--  Beautiful default styling for all HTML elements
--  Utility classes for rapid development
--  Sass-based with customizable variables
--  Responsive design principles
--  Lightweight and performant
+- Beautiful default styling for all HTML elements
+- Utility classes for rapid development
+- Sass-based with customizable variables
+- Responsive design principles
+- Lightweight and performant
 
 ## Installation
 
@@ -58,7 +57,7 @@ A lightweight, customizable CSS framework built with Sass that provides beautifu
 Download the compiled CSS file from the `dist/` folder and include it in your HTML:
 
 ```html
-<link rel="stylesheet" href="path/to/framework.css">
+<link rel="stylesheet" href="path/to/aesthetic.css">
 ```
 
 ### Option 2: Build from Source
@@ -76,7 +75,7 @@ Download the compiled CSS file from the `dist/` folder and include it in your HT
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Project</title>
-    <link rel="stylesheet" href="path/to/framework.css">
+    <link rel="stylesheet" href="path/to/aesthetic.css">
 </head>
 <body>
     <!-- Your content here -->
@@ -99,22 +98,44 @@ All standard HTML elements come with beautiful default styling:
 ```html
 <p class="text-primary">Primary text color</p>
 <p class="text-secondary">Secondary text color</p>
+<p class="text-success">Success text color</p>
+<p class="text-danger">Danger text color</p>
 <div class="bg-primary">Primary background</div>
+<div class="bg-secondary">Secondary background</div>
 ```
 
 #### Typography
 ```html
 <p class="font-bold">Bold text</p>
+<p class="font-normal">Normal text</p>
 <p class="font-light">Light text</p>
 <p class="text-lg">Large text</p>
+<p class="text-md">Medium text</p>
 <p class="text-sm">Small text</p>
+<p class="text-xs">Extra small text</p>
 ```
 
 #### Spacing
 ```html
-<div class="m-1">Margin small</div>
-<div class="p-2">Padding medium</div>
-<div class="mt-3">Margin top large</div>
+<!-- Margin classes -->
+<div class="m-0">No margin</div>
+<div class="m-1">Small margin</div>
+<div class="m-2">Medium margin</div>
+<div class="m-3">Large margin</div>
+<div class="mt-2">Margin top</div>
+<div class="mb-2">Margin bottom</div>
+<div class="ml-2">Margin left</div>
+<div class="mr-2">Margin right</div>
+
+<!-- Padding classes -->
+<div class="p-0">No padding</div>
+<div class="p-1">Small padding</div>
+<div class="p-2">Medium padding</div>
+<div class="p-3">Large padding</div>
+<div class="pt-2">Padding top</div>
+<div class="pb-2">Padding bottom</div>
+<div class="pl-2">Padding left</div>
+<div class="pr-2">Padding right</div>
 ```
 
 #### Borders
@@ -122,6 +143,17 @@ All standard HTML elements come with beautiful default styling:
 <div class="border">Default border</div>
 <div class="border-rounded">Rounded border</div>
 <div class="border-thick">Thick border</div>
+<div class="border-primary">Primary color border</div>
+<div class="border-none">No border</div>
+```
+
+#### Display
+```html
+<div class="d-block">Display block</div>
+<div class="d-inline">Display inline</div>
+<div class="d-inline-block">Display inline-block</div>
+<div class="d-flex">Display flex</div>
+<div class="d-none">Display none</div>
 ```
 
 ## Customization
@@ -134,11 +166,19 @@ To customize the framework, modify the variables in `src/variables/_config.scss`
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 $success-color: #28a745;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
 
 // Typography
-$font-family-base: 'Helvetica Neue', sans-serif;
+$font-family-base: 'Helvetica Neue', Arial, sans-serif;
 $font-size-base: 1rem;
 $line-height-base: 1.5;
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-bold: 700;
 
 // Spacing
 $spacer: 1rem;
@@ -150,43 +190,49 @@ $spacers: (
   4: $spacer * 1.5,
   5: $spacer * 3
 );
+
+// Borders
+$border-width: 1px;
+$border-radius: 0.25rem;
+$border-color: #dee2e6;
 ```
 
 ### Building Custom Version
 1. Modify variables in `src/variables/_config.scss`
 2. Run `npm run build` to compile your custom version
-3. Use the generated CSS from `dist/framework.css`
+3. Use the generated CSS from `dist/aesthetic.css`
 
 ## File Structure
 ```
-src/
-├── base/
-│   ├── _reset.scss          # Luz Helena
-│   ├── _typography.scss     # David
-│   ├── _buttons.scss        # Solomon
-│   ├── _forms.scss          # Chuhong
-│   ├── _tables.scss         # Chuhong
-│   ├── _lists.scss          # Chuhong
-│   ├── _text.scss           # Solomon
-│   └── _layout.scss         # Luz Helena
-├── utilities/
-│   ├── _colors.scss         # Solomon
-│   ├── _typography.scss     # Solomon
-│   ├── _font-sizes.scss     # Luz Helena
-│   ├── _margin.scss         # Chuhong
-│   ├── _padding.scss        # Chuhong
-│   ├── _borders.scss        # Solomon
-│   └── _display.scss        # Luz Helena
-├── variables/
-│   ├── _config.scss         # David
-│   └── _colors.scss         # David
-└── main.scss                # David
-
-dist/
-└── framework.css            # Compiled output
-
-examples/
-└── demo.html                # David
+aesthetic_css_framework/
+├── src/
+│   ├── base/
+│   │   ├── _reset.scss          # Luz Helena
+│   │   ├── _typography.scss     # David
+│   │   ├── _buttons.scss        # Solomon
+│   │   ├── _forms.scss          # Chuhong
+│   │   ├── _tables.scss         # Chuhong
+│   │   ├── _lists.scss          # Chuhong
+│   │   ├── _text.scss           # Solomon
+│   │   └── _layout.scss         # Luz Helena
+│   ├── utilities/
+│   │   ├── _colors.scss         # Solomon
+│   │   ├── _typography.scss     # Solomon
+│   │   ├── _font-sizes.scss     # Luz Helena
+│   │   ├── _margin.scss         # Chuhong
+│   │   ├── _padding.scss        # Chuhong
+│   │   ├── _borders.scss        # Solomon
+│   │   └── _display.scss        # Luz Helena
+│   ├── variables/
+│   │   ├── _config.scss         # David
+│   │   └── _colors.scss         # David
+│   └── main.scss                # David
+├── dist/ (distribution folder)
+│   └── aesthetic.css            # Compiled output
+├── examples/
+│   └── demo.html                # David
+│                # David
+└── README.md
 ```
 
 ## Development
@@ -198,7 +244,7 @@ examples/
 ### Setup
 ```bash
 git clone <repository-url>
-cd custom_css_framework
+cd aesthetic_css_framework
 npm install
 ```
 
@@ -213,6 +259,10 @@ npm install
 - Safari (latest)
 - Edge (latest)
 
+## Examples
+
+Check out the `examples/demo.html` file to see the Aesthetic CSS Framework in action with all styled elements and utility classes.
+
 ## Contributing
 1. Fork the repository
 2. Create a feature branch
@@ -225,7 +275,9 @@ This project is licensed under the MIT License.
 
 ## Changelog
 ### v1.0.0
-- Initial release
-- Base HTML element styling
-- Utility classes for common styling
-- Sass variable system for customization
+- Initial release of Aesthetic CSS Framework
+- Base HTML element styling for headings, buttons, forms, tables, lists
+- Utility classes for colors, typography, spacing, borders, and display
+- Sass variable system for easy customization
+- Responsive design principles
+- Complete documentation and examples
