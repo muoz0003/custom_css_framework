@@ -1,0 +1,234 @@
+// =============================================================================
+// BASE TYPOGRAPHY - David's Responsibility
+// =============================================================================
+// Base styling for HTML heading and text elements
+
+// Import variables
+@import '../variables/config';
+@import '../variables/colors';
+
+// Base Typography Settings
+// =============================================================================
+body {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $body-color;
+  background-color: $body-bg;
+  font-weight: $font-weight-normal;
+}
+
+// Headings
+// =============================================================================
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: $spacer * 0.5;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  color: inherit;
+}
+
+h1 {
+  font-size: $h1-font-size;
+  margin-bottom: $spacer;
+}
+
+h2 {
+  font-size: $h2-font-size;
+  margin-bottom: $spacer * 0.75;
+}
+
+h3 {
+  font-size: $h3-font-size;
+  margin-bottom: $spacer * 0.75;
+}
+
+h4 {
+  font-size: $h4-font-size;
+  margin-bottom: $spacer * 0.5;
+}
+
+h5 {
+  font-size: $h5-font-size;
+  margin-bottom: $spacer * 0.5;
+}
+
+h6 {
+  font-size: $h6-font-size;
+  margin-bottom: $spacer * 0.5;
+}
+
+// Heading utility classes (heading size without semantic meaning)
+.h1 {
+  font-size: $h1-font-size;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+.h2 {
+  font-size: $h2-font-size;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+.h3 {
+  font-size: $h3-font-size;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+.h4 {
+  font-size: $h4-font-size;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+.h5 {
+  font-size: $h5-font-size;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+.h6 {
+  font-size: $h6-font-size;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+}
+
+// Paragraphs and Text Elements
+// =============================================================================
+p {
+  margin-top: 0;
+  margin-bottom: $spacer;
+  line-height: $line-height-base;
+}
+
+// Lead paragraph (larger, emphasized text)
+.lead {
+  font-size: $font-size-lg;
+  font-weight: $font-weight-light;
+  line-height: 1.4;
+  margin-bottom: $spacer * 1.5;
+}
+
+// Text size utilities (semantic classes)
+.text-body {
+  font-size: $font-size-base !important;
+}
+
+// Display headings (larger than regular headings)
+.display-1 {
+  font-size: 6rem;
+  font-weight: $font-weight-light;
+  line-height: 1.1;
+}
+
+.display-2 {
+  font-size: 5.5rem;
+  font-weight: $font-weight-light;
+  line-height: 1.1;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: $font-weight-light;
+  line-height: 1.1;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: $font-weight-light;
+  line-height: 1.1;
+}
+
+// Blockquotes
+// =============================================================================
+blockquote {
+  margin: 0 0 $spacer;
+  padding: $spacer * 0.5 $spacer;
+  border-left: 4px solid $primary-color;
+  background-color: $gray-100;
+  font-size: $font-size-lg;
+  font-style: italic;
+  
+  p {
+    margin-bottom: 0;
+  }
+  
+  footer {
+    font-size: $font-size-sm;
+    color: $text-muted;
+    font-style: normal;
+    margin-top: $spacer * 0.5;
+    
+    &::before {
+      content: "— ";
+    }
+  }
+}
+
+// Code Elements
+// =============================================================================
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 87.5%;
+  color: $danger-color;
+  background-color: $gray-100;
+  padding: 0.2rem 0.4rem;
+  border-radius: $border-radius-sm;
+}
+
+pre {
+  background-color: $gray-100;
+  border: 1px solid $border-color;
+  border-radius: $border-radius;
+  padding: $spacer;
+  overflow-x: auto;
+  margin-bottom: $spacer;
+  
+  code {
+    background-color: transparent;
+    color: inherit;
+    padding: 0;
+  }
+}
+
+// Horizontal Rules
+// =============================================================================
+hr {
+  margin: $spacer * 2 0;
+  border: 0;
+  border-top: $border-width solid $border-color;
+}
+
+// Responsive Typography
+// =============================================================================
+@media (max-width: $breakpoint-sm) {
+  h1 {
+    font-size: $h1-font-size * 0.85;
+  }
+  
+  h2 {
+    font-size: $h2-font-size * 0.85;
+  }
+  
+  h3 {
+    font-size: $h3-font-size * 0.9;
+  }
+  
+  .display-1 {
+    font-size: 4.5rem;
+  }
+  
+  .display-2 {
+    font-size: 4rem;
+  }
+  
+  .display-3 {
+    font-size: 3rem;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem;
+  }
+}
