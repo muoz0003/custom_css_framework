@@ -1,17 +1,8 @@
 @charset "UTF-8";
 /***
-    ## Version History
 
-### v1.0.0 (Initial Release)
-- **Initial framework structure** created by team
-- **Base typography system** implemented by David Muñoz Jensen
-- **Color system and variables** established by David Muñoz Jensen
-- **CSS Reset foundation** implemented by Luz Helena Rodriguez using The New CSS Reset v1.11.3
-- **Form styling system** created by Chuhong Feng
-- **Button and text components** developed by Solomon Tesfaye
-- **Layout and utility classes** built by Luz Helena Rodriguez
-- **Demo showcase page** created by David Muñoz Jensen
-- **Build system and workflow** established with Sass compilation
+### v1.0.1 (30/5/2025)
+- Initial release with core features
 
 ### Key Features:
 - ✅ Modern CSS Reset (The New CSS Reset v1.11.3)
