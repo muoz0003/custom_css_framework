@@ -1,0 +1,58 @@
+// =============================================================================
+// BUTTONS STYLING - Solomon's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables (David will create these)
+// @import '../variables/config';
+// @import '../variables/colors';
+
+// Step 2: Style basic button and .btn class
+// TODO: Add styles for:
+// - button, .btn selector
+// - Basic properties: padding, font-size, border, background-color
+// - Hover effects
+// - Disabled state
+
+// Step 3: Create button color variants
+// TODO: Add classes for:
+// - .btn-primary (use $primary-color)
+// - .btn-secondary (use $secondary-color) 
+// - .btn-success (use $success-color)
+// - .btn-danger (use $danger-color)
+
+// Step 4: Create button sizes (optional)
+// TODO: Add classes for:
+// - .btn-sm (smaller padding and font-size)
+// - .btn-lg (larger padding and font-size)
+
+// Step 5: Create outline buttons (optional)
+// TODO: Add classes for:
+// - .btn-outline-primary (transparent background, colored border/text)
+
+// Example structure:
+/*
+button,
+.btn {
+  // Base button styles here
+  padding: 0.5rem 1rem;
+  border: 1px solid;
+  cursor: pointer;
+  // Add more styles...
+  
+  &:hover {
+    // Hover effects here
+  }
+}
+
+.btn-primary {
+  // Primary button styles
+  background-color: blue; // Use variable later: $primary-color
+  color: white;
+}
+*/
+
+// NOTES:
+// - Wait for David to create variables before using them
+// - Focus on making buttons look good and consistent
+// - Test with different button types: <button>, <input type="button">, <a class="btn">
+// - Make sure hover and focus states work well

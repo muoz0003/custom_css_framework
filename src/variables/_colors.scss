@@ -1,0 +1,138 @@
+// =============================================================================
+// COLOR VARIABLES - David's Responsibility
+// =============================================================================
+
+// Brand Colors
+// =============================================================================
+$primary-color: #007bff !default;
+$secondary-color: #6c757d !default;
+$success-color: #28a745 !default;
+$info-color: #17a2b8 !default;
+$warning-color: #ffc107 !default;
+$danger-color: #dc3545 !default;
+$light-color: #f8f9fa !default;
+$dark-color: #343a40 !default;
+
+// Grayscale Colors
+// =============================================================================
+$white: #ffffff !default;
+$gray-100: #f8f9fa !default;
+$gray-200: #e9ecef !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #212529 !default;
+$black: #000000 !default;
+
+// Theme Colors Map
+// =============================================================================
+$theme-colors: (
+  "primary": $primary-color,
+  "secondary": $secondary-color,
+  "success": $success-color,
+  "info": $info-color,
+  "warning": $warning-color,
+  "danger": $danger-color,
+  "light": $light-color,
+  "dark": $dark-color
+) !default;
+
+// Text Colors
+// =============================================================================
+$text-color: $gray-900 !default;
+$text-muted: $gray-600 !default;
+$text-light: $gray-500 !default;
+
+// Background Colors
+// =============================================================================
+$body-bg: $white !default;
+$body-color: $text-color !default;
+
+// Link Colors
+// =============================================================================
+$link-color: $primary-color !default;
+$link-decoration: none !default;
+$link-hover-color: darken($link-color, 15%) !default;
+$link-hover-decoration: underline !default;
+
+// Border Colors
+// =============================================================================
+$border-color: $gray-300 !default;
+$border-color-light: $gray-200 !default;
+$border-color-dark: $gray-400 !default;
+
+// Component Colors
+// =============================================================================
+
+// Buttons
+$btn-primary-bg: $primary-color !default;
+$btn-primary-border: $primary-color !default;
+$btn-primary-color: $white !default;
+
+$btn-secondary-bg: $secondary-color !default;
+$btn-secondary-border: $secondary-color !default;
+$btn-secondary-color: $white !default;
+
+$btn-success-bg: $success-color !default;
+$btn-success-border: $success-color !default;
+$btn-success-color: $white !default;
+
+$btn-danger-bg: $danger-color !default;
+$btn-danger-border: $danger-color !default;
+$btn-danger-color: $white !default;
+
+$btn-warning-bg: $warning-color !default;
+$btn-warning-border: $warning-color !default;
+$btn-warning-color: $dark-color !default;
+
+$btn-info-bg: $info-color !default;
+$btn-info-border: $info-color !default;
+$btn-info-color: $white !default;
+
+$btn-light-bg: $light-color !default;
+$btn-light-border: $light-color !default;
+$btn-light-color: $dark-color !default;
+
+$btn-dark-bg: $dark-color !default;
+$btn-dark-border: $dark-color !default;
+$btn-dark-color: $white !default;
+
+// Forms
+$input-bg: $white !default;
+$input-border-color: $border-color !default;
+$input-color: $text-color !default;
+$input-placeholder-color: $gray-500 !default;
+$input-focus-border-color: $primary-color !default;
+$input-focus-bg: $white !default;
+
+// Tables
+$table-bg: transparent !default;
+$table-accent-bg: $gray-100 !default;
+$table-hover-bg: $gray-100 !default;
+$table-border-color: $border-color !default;
+$table-head-bg: $gray-200 !default;
+$table-head-color: $text-color !default;
+
+// Alert Colors
+$alert-primary-bg: lighten($primary-color, 40%) !default;
+$alert-primary-border: lighten($primary-color, 30%) !default;
+$alert-primary-color: darken($primary-color, 20%) !default;
+
+$alert-success-bg: lighten($success-color, 40%) !default;
+$alert-success-border: lighten($success-color, 30%) !default;
+$alert-success-color: darken($success-color, 20%) !default;
+
+$alert-warning-bg: lighten($warning-color, 30%) !default;
+$alert-warning-border: lighten($warning-color, 20%) !default;
+$alert-warning-color: darken($warning-color, 30%) !default;
+
+$alert-danger-bg: lighten($danger-color, 40%) !default;
+$alert-danger-border: lighten($danger-color, 30%) !default;
+$alert-danger-color: darken($danger-color, 20%) !default;
+
+$alert-info-bg: lighten($info-color, 40%) !default;
+$alert-info-border: lighten($info-color, 30%) !default;
+$alert-info-color: darken($info-color, 20%) !default;
