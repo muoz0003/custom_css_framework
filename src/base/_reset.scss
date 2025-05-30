@@ -1,6 +1,34 @@
 /***
-    This is completed, I used the example we did on class. 
+
+### v1.0.1 (25.08.2024)
+- Initial release with core features
+
+### Key Features:
+- ✅ Modern CSS Reset (The New CSS Reset v1.11.3)
+- ✅ Comprehensive typography system
+- ✅ Flexible color palette with utility classes
+- ✅ Responsive grid system
+- ✅ Form components and styling
+- ✅ Button variants and states
+- ✅ Spacing utilities (margin/padding)
+- ✅ Display and layout utilities
+- ✅ Sass-powered customization
+- ✅ VS Code integration for development
+
+### Team Contributors:
+- **David Muñoz Jensen** (Team Leader) - Variables, Typography, Main Architecture, Demo
+- **Luz Helena Rodriguez** - CSS Reset, Layout System, Display Utilities, Font Size Utilities
+- **Chuhong Feng** - Forms, Tables, Lists, Spacing Utilities (Margin/Padding)
+- **Solomon Tesfaye** - Buttons, Text Elements, Color Utilities, Border Utilities, Typography Utilities
+
+### Technical Implementation:
+- **CSS Reset**: The New CSS Reset v1.11.3 by Elad Shechter
+- **Preprocessor**: Sass/SCSS
+- **Build System**: Live Sass Compiler + npm scripts
+- **Browser Support**: Modern browsers with CSS Grid and Flexbox support
+- **File Size**: ~50KB uncompressed, ~15KB minified (estimated) 
 ***/
+
 /***
     The new CSS reset - version 1.11.3 (last updated 25.08.2024)
     GitHub page: https://github.com/elad2412/the-new-css-reset

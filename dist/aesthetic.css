@@ -1,6 +1,42 @@
 @charset "UTF-8";
 /***
-    This is completed, I used the example we did on class. 
+    ## Version History
+
+### v1.0.0 (Initial Release)
+- **Initial framework structure** created by team
+- **Base typography system** implemented by David Muñoz Jensen
+- **Color system and variables** established by David Muñoz Jensen
+- **CSS Reset foundation** implemented by Luz Helena Rodriguez using The New CSS Reset v1.11.3
+- **Form styling system** created by Chuhong Feng
+- **Button and text components** developed by Solomon Tesfaye
+- **Layout and utility classes** built by Luz Helena Rodriguez
+- **Demo showcase page** created by David Muñoz Jensen
+- **Build system and workflow** established with Sass compilation
+
+### Key Features:
+- ✅ Modern CSS Reset (The New CSS Reset v1.11.3)
+- ✅ Comprehensive typography system
+- ✅ Flexible color palette with utility classes
+- ✅ Responsive grid system
+- ✅ Form components and styling
+- ✅ Button variants and states
+- ✅ Spacing utilities (margin/padding)
+- ✅ Display and layout utilities
+- ✅ Sass-powered customization
+- ✅ VS Code integration for development
+
+### Team Contributors:
+- **David Muñoz Jensen** (Team Leader) - Variables, Typography, Main Architecture, Demo
+- **Luz Helena Rodriguez** - CSS Reset, Layout System, Display Utilities, Font Size Utilities
+- **Chuhong Feng** - Forms, Tables, Lists, Spacing Utilities (Margin/Padding)
+- **Solomon Tesfaye** - Buttons, Text Elements, Color Utilities, Border Utilities, Typography Utilities
+
+### Technical Implementation:
+- **CSS Reset**: The New CSS Reset v1.11.3 by Elad Shechter
+- **Preprocessor**: Sass/SCSS
+- **Build System**: Live Sass Compiler + npm scripts
+- **Browser Support**: Modern browsers with CSS Grid and Flexbox support
+- **File Size**: ~50KB uncompressed, ~15KB minified (estimated) 
 ***/
 /***
     The new CSS reset - version 1.11.3 (last updated 25.08.2024)
