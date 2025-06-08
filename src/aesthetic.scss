@@ -19,8 +19,7 @@
 @import 'base/reset';
 
 // Layout foundation (Luz Helena)  
-@import 'base/layout';
-
+@use 'base/layout' as layout;
 // Typography and headings (David)
 @import 'base/typography';
 

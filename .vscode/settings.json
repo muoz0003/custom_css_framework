@@ -17,5 +17,10 @@
   "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
   "liveSassCompile.settings.includeItems": [
     "/src/aesthetic.scss"
-  ]
+  ],
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#06360A",
+    "titleBar.activeBackground": "#084B0E",
+    "titleBar.activeForeground": "#F1FDF2"
+  }
 }

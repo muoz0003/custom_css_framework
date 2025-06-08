@@ -3,65 +3,117 @@
 // =============================================================================
 
 // Step 1: Import the variables (David will create these)
-// @import '../variables/config';
-// @import '../variables/colors';
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
+
 
 // Step 2: Create basic display utilities
-// TODO: Add classes for:
-// - .d-none (display: none)
-// - .d-block (display: block)
-// - .d-inline (display: inline)
-// - .d-inline-block (display: inline-block)
-// - .d-flex (display: flex)
-// - .d-inline-flex (display: inline-flex)
+
+.d-none {
+  display: none;
+}
+.d-block {
+  display: block;
+}
+.d-inline {
+  display: inline;
+}
+.d-inline-block {
+  display: inline-block;
+}
+.d-flex {
+  display: flex;
+}
+.d-inline-flex {
+  display: inline-flex;
+}
+
 
 // Step 3: Create flex utilities
-// TODO: Add classes for:
-// - .flex-row (flex-direction: row)
-// - .flex-column (flex-direction: column)
-// - .flex-wrap (flex-wrap: wrap)
-// - .flex-nowrap (flex-wrap: nowrap)
+.flex-row {
+  flex-direction: row;
+}
+.flex-column {
+  flex-direction: column;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
 
 // Step 4: Create flex alignment utilities
-// TODO: Add classes for:
-// - .justify-content-start (justify-content: flex-start)
-// - .justify-content-center (justify-content: center)
-// - .justify-content-end (justify-content: flex-end)
-// - .justify-content-between (justify-content: space-between)
-// - .align-items-start (align-items: flex-start)
-// - .align-items-center (align-items: center)
-// - .align-items-end (align-items: flex-end)
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.align-items-start {
+  align-items: flex-start;
+}
+.align-items-center {
+  align-items: center;
+}
+.align-items-end {
+  align-items: flex-end;
+}
+
+
 
 // Step 5: Create responsive display utilities (optional)
-// TODO: Add classes for:
-// - .d-sm-block, .d-md-flex (responsive display changes)
-
-// Example structure:
-/*
 .d-none {
   display: none !important;
 }
-
 .d-block {
   display: block !important;
 }
-
 .d-flex {
   display: flex !important;
 }
 
-.justify-content-center {
-  justify-content: center !important;
+.d-none{ 
+  display: none !important; 
+}
+.d-block  { 
+  display: block !important; 
+}
+.d-inline  { 
+  display: inline !important; 
+}
+.d-inline-block {
+   display: inline-block !important; 
+  }
+.d-flex { 
+  display: flex !important; 
+}
+.d-inline-flex { 
+  display: inline-flex !important; 
 }
 
-.align-items-center {
-  align-items: center !important;
+@each $breakpoint, $min-width in (
+  sm: config.$breakpoint-sm,
+  md: config.$breakpoint-md,
+  lg: config.$breakpoint-lg,
+  xl: config.$breakpoint-xl
+) {
+  @media (min-width: #{$min-width}) {
+    .d-#{$breakpoint}-none        { display: none !important; }
+    .d-#{$breakpoint}-block       { display: block !important; }
+    .d-#{$breakpoint}-inline      { display: inline !important; }
+    .d-#{$breakpoint}-inline-block { display: inline-block !important; }
+    .d-#{$breakpoint}-flex        { display: flex !important; }
+    .d-#{$breakpoint}-inline-flex { display: inline-flex !important; }
+  }
 }
-
-.flex-column {
-  flex-direction: column !important;
-}
-*/
 
 // NOTES:
 // - Use !important to ensure utility classes override other styles
