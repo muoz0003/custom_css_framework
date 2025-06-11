@@ -53,8 +53,8 @@ body {
 // Column widths
 @for $i from 1 through 12 {
   .col-#{$i} {
-    flex: 0 0 #{($i / 12 * 100)}%;
-    max-width: #{($i / 12 * 100)}%;
+    flex: 0 0 (100% * $i / 12);
+    max-width: (100% * $i / 12);
     padding: 0 0.5rem;
     box-sizing: border-box;
   }
@@ -71,8 +71,9 @@ $breakpoints: (
   @media (min-width: $size) {
     @for $i from 1 through 12 {
       .col-#{$label}-#{$i} {
-        flex: 0 0 #{($i / 12 * 100)}%;
-        max-width: #{($i / 12 * 100)}%;
+        $width: ($i / 12) * 100%;
+        flex: 0 0 $width;
+        max-width: $width;
         padding: 0 0.5rem;
         box-sizing: border-box;
       }
