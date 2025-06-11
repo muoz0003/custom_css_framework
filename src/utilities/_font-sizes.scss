@@ -32,15 +32,8 @@
 .text-xxl {
   font-size: 2rem !important;        
 }
-// TODO: Add classes for:
-// - .text-xs (extra small text)
-// - .text-sm (small text)
-// - .text-md (medium/base text)
-// - .text-lg (large text)
-// - .text-xl (extra large text)
-// - .text-xxl (extra extra large text)
 
-// Step 3: Create heading size utilities
+
 .h1 {
   font-size: 2.5rem !important;
 }
@@ -65,15 +58,7 @@
   font-size: 1rem !important;
 }
 
-// TODO: Add classes for:
-// - .h1 (h1 size without h1 semantics)
-// - .h2 (h2 size without h2 semantics)
-// - .h3 (h3 size without h3 semantics)
-// - .h4 (h4 size without h4 semantics)
-// - .h5 (h5 size without h5 semantics)
-// - .h6 (h6 size without h6 semantics)
 
-// Step 4: Create responsive font size utilities (optional)
 @media (min-width: config.$breakpoint-lg) {
   .text-sm-lg {
     font-size: 1.25rem !important; // Small on mobile, large on desktop
@@ -134,9 +119,3 @@
   font-size: config.$h6-font-size !important; // 1rem
 }
 
-// NOTES:
-// - Wait for David to create variables before using them
-// - Use !important to ensure utility classes override other styles
-// - These classes change font size without changing semantic meaning
-// - Test with different content to ensure readability
-// - Consider responsive behavior for better mobile experience

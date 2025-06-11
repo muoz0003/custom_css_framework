@@ -7,7 +7,7 @@
 @use '../variables/colors' as colors;
 
 
-// Step 2: Create basic display utilities
+
 
 .d-none {
   display: none;
@@ -29,7 +29,7 @@
 }
 
 
-// Step 3: Create flex utilities
+
 .flex-row {
   flex-direction: row;
 }
@@ -44,7 +44,6 @@
 }
 
 
-// Step 4: Create flex alignment utilities
 .justify-content-start {
   justify-content: flex-start;
 }
@@ -69,7 +68,7 @@
 
 
 
-// Step 5: Create responsive display utilities (optional)
+
 .d-none {
   display: none !important;
 }
