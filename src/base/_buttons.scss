@@ -2,57 +2,91 @@
 // BUTTONS STYLING - Solomon's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables (David will create these)
-// @import '../variables/config';
-// @import '../variables/colors';
+// Step 1: Import variables
+@import '../variables/config';
+@import '../variables/colors';
 
-// Step 2: Style basic button and .btn class
-// TODO: Add styles for:
-// - button, .btn selector
-// - Basic properties: padding, font-size, border, background-color
-// - Hover effects
-// - Disabled state
-
-// Step 3: Create button color variants
-// TODO: Add classes for:
-// - .btn-primary (use $primary-color)
-// - .btn-secondary (use $secondary-color) 
-// - .btn-success (use $success-color)
-// - .btn-danger (use $danger-color)
-
-// Step 4: Create button sizes (optional)
-// TODO: Add classes for:
-// - .btn-sm (smaller padding and font-size)
-// - .btn-lg (larger padding and font-size)
-
-// Step 5: Create outline buttons (optional)
-// TODO: Add classes for:
-// - .btn-outline-primary (transparent background, colored border/text)
-
-// Example structure:
-/*
+// Step 2: Base button styles
 button,
 .btn {
-  // Base button styles here
+  display: inline-block;
   padding: 0.5rem 1rem;
-  border: 1px solid;
+  font-size: 1rem;
+  border: 1px solid transparent;
+  border-radius: $border-radius;
+  background-color: $primary-color;
+  color: #fff;
   cursor: pointer;
-  // Add more styles...
-  
-  &:hover {
-    // Hover effects here
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+
+  &:hover,
+  &:focus {
+    background-color: darken($primary-color, 10%);
+    outline: none;
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
   }
 }
 
+// Step 3: Color variants
 .btn-primary {
-  // Primary button styles
-  background-color: blue; // Use variable later: $primary-color
-  color: white;
-}
-*/
+  background-color: $primary-color;
+  color: #fff;
 
-// NOTES:
-// - Wait for David to create variables before using them
-// - Focus on making buttons look good and consistent
-// - Test with different button types: <button>, <input type="button">, <a class="btn">
-// - Make sure hover and focus states work well
+  &:hover {
+    background-color: darken($primary-color, 10%);
+  }
+}
+
+.btn-secondary {
+  background-color: $secondary-color;
+  color: #fff;
+
+  &:hover {
+    background-color: darken($secondary-color, 10%);
+  }
+}
+
+.btn-success {
+  background-color: $success-color;
+  color: #fff;
+
+  &:hover {
+    background-color: darken($success-color, 10%);
+  }
+}
+
+.btn-danger {
+  background-color: $danger-color;
+  color: #fff;
+
+  &:hover {
+    background-color: darken($danger-color, 10%);
+  }
+}
+
+// Step 4: Button sizes
+.btn-sm {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+}
+
+// Step 5: Outline button
+.btn-outline-primary {
+  background-color: transparent;
+  color: $primary-color;
+  border: 1px solid $primary-color;
+
+  &:hover {
+    background-color: $primary-color;
+    color: #fff;
+  }
+}

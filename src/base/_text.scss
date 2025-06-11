@@ -2,83 +2,125 @@
 // TEXT STYLING - Solomon's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables (David will create these)
-// @import '../variables/config';
-// @import '../variables/colors';
+// Step 1: Import the variables
+@import '../variables/config';
+@import '../variables/colors';
 
-// Step 2: Style basic text elements
-// TODO: Add styles for:
-// - p (paragraphs)
-// - a (links)
-// - strong, b (bold text)
-// - em, i (italic text)
-// - small (small text)
-// - mark (highlighted text)
-// - del, s (strikethrough text)
-// - ins, u (underlined text)
-
-// Step 3: Create text utility classes
-// TODO: Add classes for:
-// - .text-left (align text left)
-// - .text-center (align text center)
-// - .text-right (align text right)
-// - .text-justify (justify text)
-
-// Step 4: Create text color classes
-// TODO: Add classes for:
-// - .text-primary (primary color text)
-// - .text-secondary (secondary color text)
-// - .text-success (success color text)
-// - .text-danger (danger color text)
-// - .text-warning (warning color text)
-// - .text-info (info color text)
-// - .text-muted (muted/gray text)
-
-// Step 5: Create text transform classes
-// TODO: Add classes for:
-// - .text-lowercase (transform to lowercase)
-// - .text-uppercase (transform to uppercase)
-// - .text-capitalize (capitalize first letter of each word)
-
-// Step 6: Create text decoration classes
-// TODO: Add classes for:
-// - .text-decoration-none (remove underlines from links)
-// - .text-decoration-underline (add underline)
-// - .text-decoration-line-through (strikethrough)
-
-// Example structure:
-/*
+// Step 2: Basic text element styles
 p {
-  margin: 0 0 1rem 0;
+  margin-bottom: 1rem;
   line-height: 1.5;
 }
 
 a {
-  color: blue; // Use $primary-color later
+  color: $primary-color;
   text-decoration: none;
-  
+  transition: color 0.3s ease;
+
   &:hover {
     text-decoration: underline;
-    color: darkblue; // Use darker shade later
+    color: darken($primary-color, 10%);
   }
 }
 
-strong, b {
-  font-weight: bold;
+strong,
+b {
+  font-weight: $font-weight-bold;
 }
 
-.text-primary {
-  color: blue !important; // Use $primary-color later
+em,
+i {
+  font-style: italic;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+mark {
+  background-color: $warning-color;
+  color: #000;
+  padding: 0.1em 0.3em;
+}
+
+del,
+s {
+  text-decoration: line-through;
+}
+
+ins,
+u {
+  text-decoration: underline;
+}
+
+// Step 3: Text alignment utility classes
+.text-left {
+  text-align: left !important;
 }
 
 .text-center {
   text-align: center !important;
 }
-*/
 
-// NOTES:
-// - Wait for David to create variables before using them
-// - Make sure links have good hover states
-// - Test with different text content and lengths
-// - Ensure text colors have good contrast for accessibility
-// - Use !important on utility classes to ensure they override other styles
+.text-right {
+  text-align: right !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+// Step 4: Text color utility classes
+.text-primary {
+  color: $primary-color !important;
+}
+
+.text-secondary {
+  color: $secondary-color !important;
+}
+
+.text-success {
+  color: $success-color !important;
+}
+
+.text-danger {
+  color: $danger-color !important;
+}
+
+.text-warning {
+  color: $warning-color !important;
+}
+
+.text-info {
+  color: $info-color !important;
+}
+
+.text-muted {
+  color: #6c757d !important; // You can also make this a variable if needed
+}
+
+// Step 5: Text transform utility classes
+.text-lowercase {
+  text-transform: lowercase !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.text-capitalize {
+  text-transform: capitalize !important;
+}
+
+// Step 6: Text decoration utility classes
+.text-decoration-none {
+  text-decoration: none !important;
+}
+
+.text-decoration-underline {
+  text-decoration: underline !important;
+}
+
+.text-decoration-line-through {
+  text-decoration: line-through !important;
+}

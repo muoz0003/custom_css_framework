@@ -2,72 +2,117 @@
 // COLOR UTILITIES - Solomon's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables (David will create these)
-// @import '../variables/config';
-// @import '../variables/colors';
+// Step 1: Import the variables
+@import '../variables/config';
+@import '../variables/colors';
 
-// Step 2: Create text color utilities
-// TODO: Add classes for:
-// - .text-primary (primary color text)
-// - .text-secondary (secondary color text)
-// - .text-success (success color text)
-// - .text-danger (danger color text)
-// - .text-warning (warning color text)
-// - .text-info (info color text)
-// - .text-light (light color text)
-// - .text-dark (dark color text)
-// - .text-muted (muted/gray text)
-// - .text-white (white text)
-// - .text-black (black text)
-
-// Step 3: Create background color utilities
-// TODO: Add classes for:
-// - .bg-primary (primary background color)
-// - .bg-secondary (secondary background color)
-// - .bg-success (success background color)
-// - .bg-danger (danger background color)
-// - .bg-warning (warning background color)
-// - .bg-info (info background color)
-// - .bg-light (light background color)
-// - .bg-dark (dark background color)
-// - .bg-white (white background)
-// - .bg-transparent (transparent background)
-
-// Step 4: Create border color utilities
-// TODO: Add classes for:
-// - .border-primary (primary border color)
-// - .border-secondary (secondary border color)
-// - .border-success (success border color)
-// - .border-danger (danger border color)
-// - .border-warning (warning border color)
-// - .border-info (info border color)
-
-// Example structure:
-/*
+// Step 2: Text color utility classes
 .text-primary {
-  color: blue !important; // Use $primary-color later
+  color: $primary-color !important;
+}
+
+.text-secondary {
+  color: $secondary-color !important;
 }
 
 .text-success {
-  color: green !important; // Use $success-color later
+  color: $success-color !important;
 }
 
+.text-danger {
+  color: $danger-color !important;
+}
+
+.text-warning {
+  color: $warning-color !important;
+}
+
+.text-info {
+  color: $info-color !important;
+}
+
+.text-light {
+  color: #f8f9fa !important;
+}
+
+.text-dark {
+  color: #343a40 !important;
+}
+
+.text-muted {
+  color: #6c757d !important;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-black {
+  color: #000000 !important;
+}
+
+// Step 3: Background color utility classes
 .bg-primary {
-  background-color: blue !important; // Use $primary-color later
+  background-color: $primary-color !important;
+}
+
+.bg-secondary {
+  background-color: $secondary-color !important;
+}
+
+.bg-success {
+  background-color: $success-color !important;
 }
 
 .bg-danger {
-  background-color: red !important; // Use $danger-color later
+  background-color: $danger-color !important;
 }
 
+.bg-warning {
+  background-color: $warning-color !important;
+}
+
+.bg-info {
+  background-color: $info-color !important;
+}
+
+.bg-light {
+  background-color: #f8f9fa !important;
+}
+
+.bg-dark {
+  background-color: #343a40 !important;
+}
+
+.bg-white {
+  background-color: #ffffff !important;
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+// Step 4: Border color utility classes
 .border-primary {
-  border-color: blue !important; // Use $primary-color later
+  border-color: $primary-color !important;
 }
-*/
 
-// NOTES:
-// - Wait for David to create variables before using them
-// - Use !important to ensure utility classes override other styles
-// - Test color combinations for accessibility (contrast)
-// - Consider adding hover states for interactive elements
-// - Make sure colors work well together across the framework
+.border-secondary {
+  border-color: $secondary-color !important;
+}
+
+.border-success {
+  border-color: $success-color !important;
+}
+
+.border-danger {
+  border-color: $danger-color !important;
+}
+
+.border-warning {
+  border-color: $warning-color !important;
+}
+
+.border-info {
+  border-color: $info-color !important;
+}

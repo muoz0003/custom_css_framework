@@ -1,0 +1,87 @@
+// =============================================================================
+// BORDER UTILITIES - Solomon's Responsibility
+// =============================================================================
+
+// Step 1: Import the variables
+@import '../variables/config';
+@import '../variables/colors';
+
+// Step 2: Basic border utilities
+.border {
+  border: $border-width solid $border-color !important;
+}
+
+.border-none {
+  border: none !important;
+}
+
+.border-thick {
+  border-width: 2px !important;
+}
+
+// Step 3: Border sides
+.border-top {
+  border-top: $border-width solid $border-color !important;
+}
+
+.border-bottom {
+  border-bottom: $border-width solid $border-color !important;
+}
+
+.border-left {
+  border-left: $border-width solid $border-color !important;
+}
+
+.border-right {
+  border-right: $border-width solid $border-color !important;
+}
+
+// Step 4: Rounded borders
+.border-rounded {
+  border-radius: $border-radius !important;
+}
+
+.border-pill {
+  border-radius: 50rem !important;
+}
+
+// Step 5: Border color utilities (uses variables from _colors.scss)
+.border-primary {
+  border-color: $primary-color !important;
+}
+
+.border-secondary {
+  border-color: $secondary-color !important;
+}
+
+.border-success {
+  border-color: $success-color !important;
+}
+
+.border-danger {
+  border-color: $danger-color !important;
+}
+
+.border-warning {
+  border-color: $warning-color !important;
+}
+
+.border-info {
+  border-color: $info-color !important;
+}
+
+.border-light {
+  border-color: #f8f9fa !important;
+}
+
+.border-dark {
+  border-color: #343a40 !important;
+}
+
+.border-white {
+  border-color: #ffffff !important;
+}
+
+.border-black {
+  border-color: #000000 !important;
+}
