@@ -2,61 +2,255 @@
 // MARGIN UTILITIES - Chuhong's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables (David will create these)
-// @import '../variables/config';
-// @import '../variables/colors';
 
-// Step 2: Create basic margin utilities
-// TODO: Add classes for:
-// - .m-0, .m-1, .m-2, .m-3, .m-4, .m-5 (all sides margin)
-// - Use the $spacers map from config for consistent spacing
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
 
-// Step 3: Create directional margin utilities
-// TODO: Add classes for:
-// - .mt-0 through .mt-5 (margin-top)
-// - .mb-0 through .mb-5 (margin-bottom)
-// - .ml-0 through .ml-5 (margin-left)
-// - .mr-0 through .mr-5 (margin-right)
 
-// Step 4: Create axis margin utilities
-// TODO: Add classes for:
-// - .mx-0 through .mx-5 (margin left and right)
-// - .my-0 through .my-5 (margin top and bottom)
+$spacers: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+) !default;
 
-// Step 5: Create auto margin utilities
-// TODO: Add classes for:
-// - .m-auto (margin auto all sides)
-// - .mx-auto (margin auto left and right - for centering)
-// - .mt-auto, .mb-auto, .ml-auto, .mr-auto (directional auto margins)
+// Use config spacers if available, otherwise use local spacers
+$spacer-map: if(variable-exists('config.$spacers'), config.$spacers, $spacers);
 
-// Example structure:
-/*
-.m-0 {
-  margin: 0 !important;
+// Generate all sides margin utilities
+@each $key, $value in $spacer-map {
+  .m-#{$key} {
+    margin: $value !important;
+  }
 }
 
-.m-1 {
-  margin: 0.25rem !important; // Use $spacers map value later
+// Generate directional margin utilities
+// Margin Top
+@each $key, $value in $spacer-map {
+  .mt-#{$key} {
+    margin-top: $value !important;
+  }
 }
 
-.mt-2 {
-  margin-top: 0.5rem !important; // Use $spacers map value later
+// Margin Bottom
+@each $key, $value in $spacer-map {
+  .mb-#{$key} {
+    margin-bottom: $value !important;
+  }
 }
 
-.mx-3 {
-  margin-left: 1rem !important; // Use $spacers map value later
-  margin-right: 1rem !important;
+// Margin Left
+@each $key, $value in $spacer-map {
+  .ml-#{$key} {
+    margin-left: $value !important;
+  }
+}
+
+// Margin Right
+@each $key, $value in $spacer-map {
+  .mr-#{$key} {
+    margin-right: $value !important;
+  }
+}
+
+// Generate axis margin utilities
+// Margin X-axis (left and right)
+@each $key, $value in $spacer-map {
+  .mx-#{$key} {
+    margin-left: $value !important;
+    margin-right: $value !important;
+  }
+}
+
+// Margin Y-axis (top and bottom)
+@each $key, $value in $spacer-map {
+  .my-#{$key} {
+    margin-top: $value !important;
+    margin-bottom: $value !important;
+  }
+}
+
+// Step 6: Auto margin utilities
+.m-auto {
+  margin: auto !important;
+}
+
+.mt-auto {
+  margin-top: auto !important;
+}
+
+.mb-auto {
+  margin-bottom: auto !important;
+}
+
+.ml-auto {
+  margin-left: auto !important;
+}
+
+.mr-auto {
+  margin-right: auto !important;
 }
 
 .mx-auto {
   margin-left: auto !important;
   margin-right: auto !important;
 }
-*/
 
-// NOTES:
-// - Wait for David to create variables and $spacers map before using them
-// - Use !important to ensure utility classes override other styles
-// - Test with different elements to ensure proper spacing
-// - mx-auto is commonly used for centering elements
-// - Consider creating a loop to generate classes from $spacers map
+.my-auto {
+  margin-top: auto !important;
+  margin-bottom: auto !important;
+}
+
+// Negative margin utilities
+@each $key, $value in $spacer-map {
+  @if $key != 0 {
+    .m-n#{$key} {
+      margin: -#{$value} !important;
+    }
+    
+    .mt-n#{$key} {
+      margin-top: -#{$value} !important;
+    }
+    
+    .mb-n#{$key} {
+      margin-bottom: -#{$value} !important;
+    }
+    
+    .ml-n#{$key} {
+      margin-left: -#{$value} !important;
+    }
+    
+    .mr-n#{$key} {
+      margin-right: -#{$value} !important;
+    }
+    
+    .mx-n#{$key} {
+      margin-left: -#{$value} !important;
+      margin-right: -#{$value} !important;
+    }
+    
+    .my-n#{$key} {
+      margin-top: -#{$value} !important;
+      margin-bottom: -#{$value} !important;
+    }
+  }
+}
+
+// Generate responsive margin utilities
+$breakpoints: (
+  sm: config.$breakpoint-sm,
+  md: config.$breakpoint-md,
+  lg: config.$breakpoint-lg,
+  xl: config.$breakpoint-xl
+);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    // All sides margin
+    @each $key, $value in $spacer-map {
+      .m-#{$breakpoint-name}-#{$key} {
+        margin: $value !important;
+      }
+    }
+
+    // Directional margin
+    @each $key, $value in $spacer-map {
+      .mt-#{$breakpoint-name}-#{$key} {
+        margin-top: $value !important;
+      }
+      
+      .mb-#{$breakpoint-name}-#{$key} {
+        margin-bottom: $value !important;
+      }
+      
+      .ml-#{$breakpoint-name}-#{$key} {
+        margin-left: $value !important;
+      }
+      
+      .mr-#{$breakpoint-name}-#{$key} {
+        margin-right: $value !important;
+      }
+    }
+
+    // Axis margin
+    @each $key, $value in $spacer-map {
+      .mx-#{$breakpoint-name}-#{$key} {
+        margin-left: $value !important;
+        margin-right: $value !important;
+      }
+      
+      .my-#{$breakpoint-name}-#{$key} {
+        margin-top: $value !important;
+        margin-bottom: $value !important;
+      }
+    }
+
+    // Auto margins (responsive)
+    .m-#{$breakpoint-name}-auto {
+      margin: auto !important;
+    }
+
+    .mt-#{$breakpoint-name}-auto {
+      margin-top: auto !important;
+    }
+
+    .mb-#{$breakpoint-name}-auto {
+      margin-bottom: auto !important;
+    }
+
+    .ml-#{$breakpoint-name}-auto {
+      margin-left: auto !important;
+    }
+
+    .mr-#{$breakpoint-name}-auto {
+      margin-right: auto !important;
+    }
+
+    .mx-#{$breakpoint-name}-auto {
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+
+    .my-#{$breakpoint-name}-auto {
+      margin-top: auto !important;
+      margin-bottom: auto !important;
+    }
+
+    // Negative margins (responsive)
+    @each $key, $value in $spacer-map {
+      @if $key != 0 {
+        .m-#{$breakpoint-name}-n#{$key} {
+          margin: -#{$value} !important;
+        }
+        
+        .mt-#{$breakpoint-name}-n#{$key} {
+          margin-top: -#{$value} !important;
+        }
+        
+        .mb-#{$breakpoint-name}-n#{$key} {
+          margin-bottom: -#{$value} !important;
+        }
+        
+        .ml-#{$breakpoint-name}-n#{$key} {
+          margin-left: -#{$value} !important;
+        }
+        
+        .mr-#{$breakpoint-name}-n#{$key} {
+          margin-right: -#{$value} !important;
+        }
+        
+        .mx-#{$breakpoint-name}-n#{$key} {
+          margin-left: -#{$value} !important;
+          margin-right: -#{$value} !important;
+        }
+        
+        .my-#{$breakpoint-name}-n#{$key} {
+          margin-top: -#{$value} !important;
+          margin-bottom: -#{$value} !important;
+        }
+      }
+    }
+  }
+}

@@ -2,117 +2,315 @@
 // COLOR UTILITIES - Solomon's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables
-@import '../variables/config';
-@import '../variables/colors';
 
-// Step 2: Text color utility classes
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
+
+// Text color utility classes
 .text-primary {
-  color: $primary-color !important;
+  color: colors.$primary-color !important;
 }
 
 .text-secondary {
-  color: $secondary-color !important;
+  color: colors.$secondary-color !important;
 }
 
 .text-success {
-  color: $success-color !important;
+  color: colors.$success-color !important;
 }
 
 .text-danger {
-  color: $danger-color !important;
+  color: colors.$danger-color !important;
 }
 
 .text-warning {
-  color: $warning-color !important;
+  color: colors.$warning-color !important;
 }
 
 .text-info {
-  color: $info-color !important;
+  color: colors.$info-color !important;
 }
 
 .text-light {
-  color: #f8f9fa !important;
+  color: colors.$gray-100 !important;
 }
 
 .text-dark {
-  color: #343a40 !important;
+  color: colors.$gray-800 !important;
 }
 
 .text-muted {
-  color: #6c757d !important;
+  color: colors.$text-muted !important;
 }
 
 .text-white {
-  color: #ffffff !important;
+  color: colors.$white !important;
 }
 
 .text-black {
-  color: #000000 !important;
+  color: colors.$black !important;
 }
 
-// Step 3: Background color utility classes
+.text-body {
+  color: colors.$body-color !important;
+}
+
+// Background color utility classes
 .bg-primary {
-  background-color: $primary-color !important;
+  background-color: colors.$primary-color !important;
 }
 
 .bg-secondary {
-  background-color: $secondary-color !important;
+  background-color: colors.$secondary-color !important;
 }
 
 .bg-success {
-  background-color: $success-color !important;
+  background-color: colors.$success-color !important;
 }
 
 .bg-danger {
-  background-color: $danger-color !important;
+  background-color: colors.$danger-color !important;
 }
 
 .bg-warning {
-  background-color: $warning-color !important;
+  background-color: colors.$warning-color !important;
 }
 
 .bg-info {
-  background-color: $info-color !important;
+  background-color: colors.$info-color !important;
 }
 
 .bg-light {
-  background-color: #f8f9fa !important;
+  background-color: colors.$gray-100 !important;
 }
 
 .bg-dark {
-  background-color: #343a40 !important;
+  background-color: colors.$gray-800 !important;
 }
 
 .bg-white {
-  background-color: #ffffff !important;
+  background-color: colors.$white !important;
 }
 
 .bg-transparent {
   background-color: transparent !important;
 }
 
-// Step 4: Border color utility classes
+.bg-body {
+  background-color: colors.$body-bg !important;
+}
+
+// Border color utility classes
 .border-primary {
-  border-color: $primary-color !important;
+  border-color: colors.$primary-color !important;
 }
 
 .border-secondary {
-  border-color: $secondary-color !important;
+  border-color: colors.$secondary-color !important;
 }
 
 .border-success {
-  border-color: $success-color !important;
+  border-color: colors.$success-color !important;
 }
 
 .border-danger {
-  border-color: $danger-color !important;
+  border-color: colors.$danger-color !important;
 }
 
 .border-warning {
-  border-color: $warning-color !important;
+  border-color: colors.$warning-color !important;
 }
 
 .border-info {
-  border-color: $info-color !important;
+  border-color: colors.$info-color !important;
+}
+
+.border-light {
+  border-color: colors.$gray-200 !important;
+}
+
+.border-dark {
+  border-color: colors.$gray-700 !important;
+}
+
+.border-white {
+  border-color: colors.$white !important;
+}
+
+.border-transparent {
+  border-color: transparent !important;
+}
+
+// Gray scale utilities
+.text-gray-50 {
+  color: colors.$gray-50 !important;
+}
+
+.text-gray-100 {
+  color: colors.$gray-100 !important;
+}
+
+.text-gray-200 {
+  color: colors.$gray-200 !important;
+}
+
+.text-gray-300 {
+  color: colors.$gray-300 !important;
+}
+
+.text-gray-400 {
+  color: colors.$gray-400 !important;
+}
+
+.text-gray-500 {
+  color: colors.$gray-500 !important;
+}
+
+.text-gray-600 {
+  color: colors.$gray-600 !important;
+}
+
+.text-gray-700 {
+  color: colors.$gray-700 !important;
+}
+
+.text-gray-800 {
+  color: colors.$gray-800 !important;
+}
+
+.text-gray-900 {
+  color: colors.$gray-900 !important;
+}
+
+// Background gray scale utilities
+.bg-gray-50 {
+  background-color: colors.$gray-50 !important;
+}
+
+.bg-gray-100 {
+  background-color: colors.$gray-100 !important;
+}
+
+.bg-gray-200 {
+  background-color: colors.$gray-200 !important;
+}
+
+.bg-gray-300 {
+  background-color: colors.$gray-300 !important;
+}
+
+.bg-gray-400 {
+  background-color: colors.$gray-400 !important;
+}
+
+.bg-gray-500 {
+  background-color: colors.$gray-500 !important;
+}
+
+.bg-gray-600 {
+  background-color: colors.$gray-600 !important;
+}
+
+.bg-gray-700 {
+  background-color: colors.$gray-700 !important;
+}
+
+.bg-gray-800 {
+  background-color: colors.$gray-800 !important;
+}
+
+.bg-gray-900 {
+  background-color: colors.$gray-900 !important;
+}
+
+// Background opacity utilities
+.bg-opacity-10 {
+  background-color: rgba(colors.$black, 0.1) !important;
+}
+
+.bg-opacity-25 {
+  background-color: rgba(colors.$black, 0.25) !important;
+}
+
+.bg-opacity-50 {
+  background-color: rgba(colors.$black, 0.5) !important;
+}
+
+.bg-opacity-75 {
+  background-color: rgba(colors.$black, 0.75) !important;
+}
+
+// Text opacity utilities
+.text-opacity-25 {
+  opacity: 0.25 !important;
+}
+
+.text-opacity-50 {
+  opacity: 0.5 !important;
+}
+
+.text-opacity-75 {
+  opacity: 0.75 !important;
+}
+
+// Hover color variants
+.text-primary-hover:hover {
+  color: darken(colors.$primary-color, 10%) !important;
+}
+
+.text-secondary-hover:hover {
+  color: darken(colors.$secondary-color, 10%) !important;
+}
+
+.text-success-hover:hover {
+  color: darken(colors.$success-color, 10%) !important;
+}
+
+.text-danger-hover:hover {
+  color: darken(colors.$danger-color, 10%) !important;
+}
+
+.text-warning-hover:hover {
+  color: darken(colors.$warning-color, 10%) !important;
+}
+
+.text-info-hover:hover {
+  color: darken(colors.$info-color, 10%) !important;
+}
+
+.text-dark-hover:hover {
+  color: darken(colors.$gray-800, 10%) !important;
+}
+
+// Background hover variants
+.bg-primary-hover:hover {
+  background-color: darken(colors.$primary-color, 10%) !important;
+}
+
+.bg-secondary-hover:hover {
+  background-color: darken(colors.$secondary-color, 10%) !important;
+}
+
+.bg-success-hover:hover {
+  background-color: darken(colors.$success-color, 10%) !important;
+}
+
+.bg-danger-hover:hover {
+  background-color: darken(colors.$danger-color, 10%) !important;
+}
+
+.bg-warning-hover:hover {
+  background-color: darken(colors.$warning-color, 10%) !important;
+}
+
+.bg-info-hover:hover {
+  background-color: darken(colors.$info-color, 10%) !important;
+}
+
+.bg-light-hover:hover {
+  background-color: darken(colors.$gray-100, 5%) !important;
+}
+
+.bg-dark-hover:hover {
+  background-color: lighten(colors.$gray-800, 10%) !important;
 }

@@ -1,65 +1,62 @@
-@use '../variables/config' as config;
-@use '../variables/colors' as colors;
-
-
 // =============================================================================
 // LAYOUT STYLING - Luz Helena's Responsibility
 // =============================================================================
 
+// 
+@use 'sass:math';
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
+
+// Base layout styles
 body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 1rem;
-  line-height: 1.5;
+  font-family: config.$font-family-base;
+  font-size: config.$font-size-base;
+  line-height: config.$line-height-base;
   color: colors.$body-color;              
   background-color: colors.$body-bg; 
   margin: 0;
   padding: 0;
 }
 
+// Container system
 .container {
   width: 100%;
-  max-width: 1200px;
+  max-width: config.$container-max-width;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 math.div(config.$grid-gutter-width, 2);
 }
 
 .container-fluid {
   width: 100%;
   margin: 0;
-  padding: 0 1rem;
+  padding: 0 math.div(config.$grid-gutter-width, 2);
 }
 
-// Add row class for proper grid system
+// Grid system
 .row {
   display: flex;
   flex-wrap: wrap;
-  margin-left: -0.5rem;
-  margin-right: -0.5rem;
+  margin-left: -#{math.div(config.$grid-gutter-width, 2)};
+  margin-right: -#{math.div(config.$grid-gutter-width, 2)};
 }
 
 .col {
   flex: 1;
-  padding: 0.5rem;
+  padding: 0 math.div(config.$grid-gutter-width, 2);
   box-sizing: border-box;
 }
 
-.col-6 {
-  flex: 0 0 50%;
-  max-width: 50%;
-  padding: 0 0.5rem;
-  box-sizing: border-box;
-}
-
-// Column widths
+// Column widths (1-12)
 @for $i from 1 through 12 {
   .col-#{$i} {
-    flex: 0 0 (100% * $i / 12);
-    max-width: (100% * $i / 12);
-    padding: 0 0.5rem;
+    flex: 0 0 percentage(math.div($i, 12));
+    max-width: percentage(math.div($i, 12));
+    padding: 0 math.div(config.$grid-gutter-width, 2);
     box-sizing: border-box;
   }
 }
 
+// Responsive columns
 $breakpoints: (
   sm: config.$breakpoint-sm,
   md: config.$breakpoint-md,
@@ -71,101 +68,97 @@ $breakpoints: (
   @media (min-width: $size) {
     @for $i from 1 through 12 {
       .col-#{$label}-#{$i} {
-        $width: ($i / 12) * 100%;
-        flex: 0 0 $width;
-        max-width: $width;
-        padding: 0 0.5rem;
+        flex: 0 0 percentage(math.div($i, 12));
+        max-width: percentage(math.div($i, 12));
+        padding: 0 math.div(config.$grid-gutter-width, 2);
         box-sizing: border-box;
+      }
+    }
+    
+    .col-#{$label} {
+      flex: 1;
+      padding: 0 math.div(config.$grid-gutter-width, 2);
+      box-sizing: border-box;
+    }
+    
+    .col-#{$label}-auto {
+      flex: 0 0 auto;
+      width: auto;
+      max-width: 100%;
+      padding: 0 math.div(config.$grid-gutter-width, 2);
+      box-sizing: border-box;
+    }
+  }
+}
+
+// Column offsets
+@for $i from 0 through 11 {
+  .offset-#{$i} {
+    margin-left: percentage(math.div($i, 12));
+  }
+}
+
+@each $label, $size in $breakpoints {
+  @media (min-width: $size) {
+    @for $i from 0 through 11 {
+      .offset-#{$label}-#{$i} {
+        margin-left: percentage(math.div($i, 12));
       }
     }
   }
 }
 
-// Display Utilities
-.d-block {
-  display: block !important;
+// Row utilities
+.row-cols-1 > * {
+  flex: 0 0 auto;
+  width: 100%;
 }
 
-.d-inline {
-  display: inline !important;
+.row-cols-2 > * {
+  flex: 0 0 auto;
+  width: 50%;
 }
 
-.d-flex {
-  display: flex !important;
+.row-cols-3 > * {
+  flex: 0 0 auto;
+  width: 33.3333%;
 }
 
-.d-none {
-  display: none !important;
+.row-cols-4 > * {
+  flex: 0 0 auto;
+  width: 25%;
 }
 
-// Flexbox Justify Content Utilities
-.justify-content-center {
-  justify-content: center !important;
+.row-cols-5 > * {
+  flex: 0 0 auto;
+  width: 20%;
 }
 
-.justify-content-between {
-  justify-content: space-between !important;
+.row-cols-6 > * {
+  flex: 0 0 auto;
+  width: 16.6667%;
 }
 
-.justify-content-end {
-  justify-content: flex-end !important;
+// Responsive row columns
+@each $label, $size in $breakpoints {
+  @media (min-width: $size) {
+    @for $i from 1 through 6 {
+      .row-cols-#{$label}-#{$i} > * {
+        flex: 0 0 auto;
+        width: percentage(math.div(1, $i));
+      }
+    }
+  }
 }
 
-.justify-content-start {
-  justify-content: flex-start !important;
-}
+// No gutters utility
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
 
-// Flexbox Align Items Utilities
-.align-items-center {
-  align-items: center !important;
-}
-
-.align-items-start {
-  align-items: flex-start !important;
-}
-
-.align-items-end {
-  align-items: flex-end !important;
-}
-
-// Width Utilities
-.w-25 {
-  width: 25% !important;
-}
-
-.w-50 {
-  width: 50% !important;
-}
-
-.w-75 {
-  width: 75% !important;
-}
-
-.w-100 {
-  width: 100% !important;
-}
-
-.w-auto {
-  width: auto !important;
-}
-
-// Height Utilities
-.h-25 {
-  height: 25% !important;
-}
-
-.h-50 {
-  height: 50% !important;
-}
-
-.h-75 {
-  height: 75% !important;
-}
-
-.h-100 {
-  height: 100% !important;
-}
-
-.h-auto {
-  height: auto !important;
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }

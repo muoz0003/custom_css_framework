@@ -2,82 +2,338 @@
 // LISTS STYLING - Chuhong's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables (David will create these)
-// @import '../variables/config';
-// @import '../variables/colors';
 
-// Step 2: Style basic list elements
-// TODO: Add styles for:
-// - ul, ol (unordered and ordered lists)
-// - li (list items)
-// - dl, dt, dd (definition lists)
-// - Basic properties: margin, padding, list-style
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
 
-// Step 3: Create list variants
-// TODO: Add classes for:
-// - .list-unstyled (removes bullets/numbers and padding)
-// - .list-inline (horizontal list items)
-// - .list-group (styled list with borders)
-// - .list-group-item (individual list group items)
-
-// Step 4: Create list group variants
-// TODO: Add classes for:
-// - .list-group-item-primary (primary colored list item)
-// - .list-group-item-success (success colored list item)
-// - .list-group-item-warning (warning colored list item)
-// - .list-group-item-danger (danger colored list item)
-
-// Step 5: Create interactive list items
-// TODO: Add classes for:
-// - .list-group-item-action (hover and active states)
-// - .active (active list item state)
-// - .disabled (disabled list item state)
-
-// Example structure:
-/*
-ul, ol {
-  margin: 0 0 1rem 0;
-  padding-left: 2rem;
+// Base list styles
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: config.$spacer;
+  padding-left: config.$list-group-item-padding-x + 1rem;
 }
 
-li {
-  margin-bottom: 0.25rem;
+ul ul,
+ol ul,
+ul ol,
+ol ol {
+  margin-bottom: 0;
 }
 
-.list-unstyled {
-  list-style: none;
-  padding-left: 0;
+dt {
+  font-weight: config.$font-weight-bold;
 }
 
-.list-inline {
-  list-style: none;
-  padding-left: 0;
-  
-  li {
-    display: inline-block;
-    margin-right: 1rem;
-  }
+dd {
+  margin-bottom: config.$spacer * 0.5;
+  margin-left: 0;
 }
 
+// List group component
 .list-group {
-  list-style: none;
+  display: flex;
+  flex-direction: column;
   padding-left: 0;
-  border: 1px solid #dee2e6;
-  border-radius: 4px;
+  margin-bottom: 0;
+  border-radius: config.$list-group-border-radius;
 }
 
 .list-group-item {
-  padding: 0.75rem;
-  border-bottom: 1px solid #dee2e6;
-  
+  position: relative;
+  display: block;
+  padding: config.$list-group-item-padding-y config.$list-group-item-padding-x;
+  color: colors.$body-color;
+  text-decoration: none;
+  background-color: colors.$white;
+  border: config.$list-group-border-width solid colors.$border-color;
+
+  &:first-child {
+    border-top-left-radius: config.$list-group-border-radius;
+    border-top-right-radius: config.$list-group-border-radius;
+  }
+
   &:last-child {
-    border-bottom: none;
+    border-bottom-left-radius: config.$list-group-border-radius;
+    border-bottom-right-radius: config.$list-group-border-radius;
+  }
+
+  &:not(:first-child) {
+    border-top: 0;
+  }
+
+  &.disabled,
+  &:disabled {
+    color: colors.$text-muted;
+    pointer-events: none;
+    background-color: colors.$gray-100;
+  }
+
+  &.active {
+    z-index: 2;
+    color: colors.$white;
+    background-color: colors.$primary-color;
+    border-color: colors.$primary-color;
   }
 }
-*/
 
-// NOTES:
-// - Wait for David to create variables before using them
-// - Make sure lists are readable and well-spaced
-// - Consider different list styles (bullets, numbers, none)
-// - Ensure list-group works well with buttons and links
+// List group actions
+.list-group-item-action {
+  width: 100%;
+  color: colors.$body-color;
+  text-align: inherit;
+
+  &:hover,
+  &:focus {
+    z-index: 1;
+    color: colors.$body-color;
+    text-decoration: none;
+    background-color: colors.$gray-100;
+  }
+
+  &:active {
+    color: colors.$body-color;
+    background-color: colors.$gray-200;
+  }
+}
+
+// List group flush (no borders)
+.list-group-flush {
+  border-radius: 0;
+
+  .list-group-item {
+    border-width: 0 0 config.$list-group-border-width;
+    border-radius: 0;
+
+    &:last-child {
+      border-bottom-width: 0;
+    }
+  }
+}
+
+// List group horizontal
+.list-group-horizontal {
+  flex-direction: row;
+
+  .list-group-item {
+    &:first-child {
+      border-bottom-left-radius: config.$list-group-border-radius;
+      border-top-right-radius: 0;
+    }
+
+    &:last-child {
+      border-top-right-radius: config.$list-group-border-radius;
+      border-bottom-left-radius: 0;
+    }
+
+    &:not(:first-child) {
+      border-top: config.$list-group-border-width solid colors.$border-color;
+      border-left: 0;
+    }
+  }
+}
+
+// Responsive horizontal list groups
+$breakpoints: (
+  sm: config.$breakpoint-sm,
+  md: config.$breakpoint-md,
+  lg: config.$breakpoint-lg,
+  xl: config.$breakpoint-xl
+);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .list-group-horizontal-#{$breakpoint-name} {
+      flex-direction: row;
+
+      .list-group-item {
+        &:first-child {
+          border-bottom-left-radius: config.$list-group-border-radius;
+          border-top-right-radius: 0;
+        }
+
+        &:last-child {
+          border-top-right-radius: config.$list-group-border-radius;
+          border-bottom-left-radius: 0;
+        }
+
+        &:not(:first-child) {
+          border-top: config.$list-group-border-width solid colors.$border-color;
+          border-left: 0;
+        }
+      }
+    }
+  }
+}
+
+// List group contextual classes
+.list-group-item-primary {
+  color: colors.$alert-primary-color;
+  background-color: colors.$alert-primary-bg;
+
+  &.list-group-item-action {
+    &:hover,
+    &:focus {
+      color: colors.$alert-primary-color;
+      background-color: darken(colors.$alert-primary-bg, 5%);
+    }
+
+    &.active {
+      color: colors.$white;
+      background-color: colors.$alert-primary-color;
+      border-color: colors.$alert-primary-color;
+    }
+  }
+}
+
+.list-group-item-secondary {
+  color: colors.$gray-700;
+  background-color: colors.$gray-200;
+
+  &.list-group-item-action {
+    &:hover,
+    &:focus {
+      color: colors.$gray-700;
+      background-color: darken(colors.$gray-200, 5%);
+    }
+
+    &.active {
+      color: colors.$white;
+      background-color: colors.$gray-700;
+      border-color: colors.$gray-700;
+    }
+  }
+}
+
+.list-group-item-success {
+  color: colors.$alert-success-color;
+  background-color: colors.$alert-success-bg;
+
+  &.list-group-item-action {
+    &:hover,
+    &:focus {
+      color: colors.$alert-success-color;
+      background-color: darken(colors.$alert-success-bg, 5%);
+    }
+
+    &.active {
+      color: colors.$white;
+      background-color: colors.$alert-success-color;
+      border-color: colors.$alert-success-color;
+    }
+  }
+}
+
+.list-group-item-info {
+  color: colors.$alert-info-color;
+  background-color: colors.$alert-info-bg;
+
+  &.list-group-item-action {
+    &:hover,
+    &:focus {
+      color: colors.$alert-info-color;
+      background-color: darken(colors.$alert-info-bg, 5%);
+    }
+
+    &.active {
+      color: colors.$white;
+      background-color: colors.$alert-info-color;
+      border-color: colors.$alert-info-color;
+    }
+  }
+}
+
+.list-group-item-warning {
+  color: colors.$alert-warning-color;
+  background-color: colors.$alert-warning-bg;
+
+  &.list-group-item-action {
+    &:hover,
+    &:focus {
+      color: colors.$alert-warning-color;
+      background-color: darken(colors.$alert-warning-bg, 5%);
+    }
+
+    &.active {
+      color: colors.$white;
+      background-color: colors.$alert-warning-color;
+      border-color: colors.$alert-warning-color;
+    }
+  }
+}
+
+.list-group-item-danger {
+  color: colors.$alert-danger-color;
+  background-color: colors.$alert-danger-bg;
+
+  &.list-group-item-action {
+    &:hover,
+    &:focus {
+      color: colors.$alert-danger-color;
+      background-color: darken(colors.$alert-danger-bg, 5%);
+    }
+
+    &.active {
+      color: colors.$white;
+      background-color: colors.$alert-danger-color;
+      border-color: colors.$alert-danger-color;
+    }
+  }
+}
+
+.list-group-item-light {
+  color: colors.$gray-700;
+  background-color: colors.$gray-100;
+
+  &.list-group-item-action {
+    &:hover,
+    &:focus {
+      color: colors.$gray-700;
+      background-color: darken(colors.$gray-100, 5%);
+    }
+
+    &.active {
+      color: colors.$white;
+      background-color: colors.$gray-700;
+      border-color: colors.$gray-700;
+    }
+  }
+}
+
+.list-group-item-dark {
+  color: colors.$white;
+  background-color: colors.$gray-800;
+
+  &.list-group-item-action {
+    &:hover,
+    &:focus {
+      color: colors.$white;
+      background-color: darken(colors.$gray-800, 5%);
+    }
+
+    &.active {
+      color: colors.$white;
+      background-color: colors.$black;
+      border-color: colors.$black;
+    }
+  }
+}
+
+// Unstyled lists
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+
+  &:not(:last-child) {
+    margin-right: config.$spacer * 0.5;
+  }
+}

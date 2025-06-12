@@ -8,46 +8,47 @@
 // 1. VARIABLES
 // =============================================================================
 // Import all variables first so they're available to all components
-@import 'variables/config';
-@import 'variables/colors';
+@use 'variables/config' as config;
+@use 'variables/colors' as colors;
 
 // 2. BASE STYLES
 // =============================================================================
 // Base styles for HTML elements - applied automatically
 
 // Reset and normalize (Luz Helena)
-@import 'base/reset';
+@use 'base/reset';
 
 // Layout foundation (Luz Helena)  
-@use 'base/layout' as layout;
+@use 'base/layout';
+
 // Typography and headings (David)
-@import 'base/typography';
+@use 'base/typography';
 
 // Interactive elements (Solomon)
-@import 'base/buttons';
-@import 'base/text';
+@use 'base/buttons';
+@use 'base/text';
 
 // Form elements (Chuhong)
-@import 'base/forms';
-@import 'base/tables';
-@import 'base/lists';
+@use 'base/forms';
+@use 'base/tables';
+@use 'base/lists';
 
 // 3. UTILITY CLASSES
 // =============================================================================
 // Utility classes for rapid development - applied with class names
 
 // Visual utilities (Solomon)
-@import 'utilities/colors';
-@import 'utilities/typography';
-@import 'utilities/borders';
+@use 'utilities/colors' as color-utils;
+@use 'utilities/typography' as typo-utils;
+@use 'utilities/borders' as border-utils;
 
 // Layout utilities (Luz Helena)
-@import 'utilities/display';
-@import 'utilities/font-sizes';
+@use 'utilities/display' as display-utils;
+@use 'utilities/font-sizes' as font-utils;
 
 // Spacing utilities (Chuhong)
-@import 'utilities/margin';
-@import 'utilities/padding';
+@use 'utilities/margin' as margin-utils;
+@use 'utilities/padding' as padding-utils;
 
 // =============================================================================
 // END OF AESTHETIC CSS FRAMEWORK

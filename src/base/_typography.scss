@@ -3,95 +3,95 @@
 // =============================================================================
 // Base styling for HTML heading and text elements
 
-// Import variables
-@import '../variables/config';
-@import '../variables/colors';
+
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
 
 // Base Typography Settings
 // =============================================================================
 body {
-  font-family: $font-family-base;
-  font-size: $font-size-base;
-  line-height: $line-height-base;
-  color: $body-color;
-  background-color: $body-bg;
-  font-weight: $font-weight-normal;
+  font-family: config.$font-family-base;
+  font-size: config.$font-size-base;
+  line-height: config.$line-height-base;
+  color: colors.$body-color;
+  background-color: colors.$body-bg;
+  font-weight: config.$font-weight-normal;
 }
 
 // Headings
 // =============================================================================
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: $spacer * 0.5;
-  font-weight: $font-weight-bold;
+  margin-bottom: config.$spacer * 0.5;
+  font-weight: config.$font-weight-bold;
   line-height: 1.2;
   color: inherit;
 }
 
 h1 {
-  font-size: $h1-font-size;
-  margin-bottom: $spacer;
+  font-size: config.$h1-font-size;
+  margin-bottom: config.$spacer;
 }
 
 h2 {
-  font-size: $h2-font-size;
-  margin-bottom: $spacer * 0.75;
+  font-size: config.$h2-font-size;
+  margin-bottom: config.$spacer * 0.75;
 }
 
 h3 {
-  font-size: $h3-font-size;
-  margin-bottom: $spacer * 0.75;
+  font-size: config.$h3-font-size;
+  margin-bottom: config.$spacer * 0.75;
 }
 
 h4 {
-  font-size: $h4-font-size;
-  margin-bottom: $spacer * 0.5;
+  font-size: config.$h4-font-size;
+  margin-bottom: config.$spacer * 0.5;
 }
 
 h5 {
-  font-size: $h5-font-size;
-  margin-bottom: $spacer * 0.5;
+  font-size: config.$h5-font-size;
+  margin-bottom: config.$spacer * 0.5;
 }
 
 h6 {
-  font-size: $h6-font-size;
-  margin-bottom: $spacer * 0.5;
+  font-size: config.$h6-font-size;
+  margin-bottom: config.$spacer * 0.5;
 }
 
 // Heading utility classes (heading size without semantic meaning)
 .h1 {
-  font-size: $h1-font-size;
-  font-weight: $font-weight-bold;
+  font-size: config.$h1-font-size;
+  font-weight: config.$font-weight-bold;
   line-height: 1.2;
 }
 
 .h2 {
-  font-size: $h2-font-size;
-  font-weight: $font-weight-bold;
+  font-size: config.$h2-font-size;
+  font-weight: config.$font-weight-bold;
   line-height: 1.2;
 }
 
 .h3 {
-  font-size: $h3-font-size;
-  font-weight: $font-weight-bold;
+  font-size: config.$h3-font-size;
+  font-weight: config.$font-weight-bold;
   line-height: 1.2;
 }
 
 .h4 {
-  font-size: $h4-font-size;
-  font-weight: $font-weight-bold;
+  font-size: config.$h4-font-size;
+  font-weight: config.$font-weight-bold;
   line-height: 1.2;
 }
 
 .h5 {
-  font-size: $h5-font-size;
-  font-weight: $font-weight-bold;
+  font-size: config.$h5-font-size;
+  font-weight: config.$font-weight-bold;
   line-height: 1.2;
 }
 
 .h6 {
-  font-size: $h6-font-size;
-  font-weight: $font-weight-bold;
+  font-size: config.$h6-font-size;
+  font-weight: config.$font-weight-bold;
   line-height: 1.2;
 }
 
@@ -99,56 +99,56 @@ h6 {
 // =============================================================================
 p {
   margin-top: 0;
-  margin-bottom: $spacer;
-  line-height: $line-height-base;
+  margin-bottom: config.$spacer;
+  line-height: config.$line-height-base;
 }
 
 // Lead paragraph (larger, emphasized text)
 .lead {
-  font-size: $font-size-lg;
-  font-weight: $font-weight-light;
+  font-size: config.$font-size-lg;
+  font-weight: config.$font-weight-light;
   line-height: 1.4;
-  margin-bottom: $spacer * 1.5;
+  margin-bottom: config.$spacer * 1.5;
 }
 
 // Text size utilities (semantic classes)
 .text-body {
-  font-size: $font-size-base !important;
+  font-size: config.$font-size-base !important;
 }
 
 // Display headings (larger than regular headings)
 .display-1 {
   font-size: 6rem;
-  font-weight: $font-weight-light;
+  font-weight: config.$font-weight-light;
   line-height: 1.1;
 }
 
 .display-2 {
   font-size: 5.5rem;
-  font-weight: $font-weight-light;
+  font-weight: config.$font-weight-light;
   line-height: 1.1;
 }
 
 .display-3 {
   font-size: 4.5rem;
-  font-weight: $font-weight-light;
+  font-weight: config.$font-weight-light;
   line-height: 1.1;
 }
 
 .display-4 {
   font-size: 3.5rem;
-  font-weight: $font-weight-light;
+  font-weight: config.$font-weight-light;
   line-height: 1.1;
 }
 
 // Blockquotes
 // =============================================================================
 blockquote {
-  margin: 0 0 $spacer;
-  padding: $spacer * 0.5 $spacer;
-  border-left: 4px solid $primary-color;
-  background-color: $gray-100;
-  font-size: $font-size-lg;
+  margin: 0 0 config.$spacer;
+  padding: config.$spacer * 0.5 config.$spacer;
+  border-left: 4px solid colors.$primary-color;
+  background-color: colors.$gray-100;
+  font-size: config.$font-size-lg;
   font-style: italic;
   
   p {
@@ -156,10 +156,10 @@ blockquote {
   }
   
   footer {
-    font-size: $font-size-sm;
-    color: $text-muted;
+    font-size: config.$font-size-sm;
+    color: colors.$text-muted;
     font-style: normal;
-    margin-top: $spacer * 0.5;
+    margin-top: config.$spacer * 0.5;
     
     &::before {
       content: "— ";
@@ -172,19 +172,19 @@ blockquote {
 code {
   font-family: 'Courier New', Courier, monospace;
   font-size: 87.5%;
-  color: $danger-color;
-  background-color: $gray-100;
+  color: colors.$danger-color;
+  background-color: colors.$gray-100;
   padding: 0.2rem 0.4rem;
-  border-radius: $border-radius-sm;
+  border-radius: config.$border-radius-sm;
 }
 
 pre {
-  background-color: $gray-100;
-  border: 1px solid $border-color;
-  border-radius: $border-radius;
-  padding: $spacer;
+  background-color: colors.$gray-100;
+  border: 1px solid colors.$border-color;
+  border-radius: config.$border-radius;
+  padding: config.$spacer;
   overflow-x: auto;
-  margin-bottom: $spacer;
+  margin-bottom: config.$spacer;
   
   code {
     background-color: transparent;
@@ -196,24 +196,50 @@ pre {
 // Horizontal Rules
 // =============================================================================
 hr {
-  margin: $spacer * 2 0;
+  margin: config.$spacer * 2 0;
   border: 0;
-  border-top: $border-width solid $border-color;
+  border-top: config.$border-width solid colors.$border-color;
+}
+
+// Small text and text emphasis
+small,
+.small {
+  font-size: config.$font-size-sm;
+}
+
+mark,
+.mark {
+  padding: 0.2em;
+  background-color: colors.$warning-color;
+  color: colors.$black;
+}
+
+// Text emphasis classes
+.text-strong {
+  font-weight: config.$font-weight-bold !important;
+}
+
+.text-emphasis {
+  font-style: italic !important;
+}
+
+.text-underline {
+  text-decoration: underline !important;
 }
 
 // Responsive Typography
 // =============================================================================
-@media (max-width: $breakpoint-sm) {
+@media (max-width: config.$breakpoint-sm) {
   h1 {
-    font-size: $h1-font-size * 0.85;
+    font-size: config.$h1-font-size * 0.85;
   }
   
   h2 {
-    font-size: $h2-font-size * 0.85;
+    font-size: config.$h2-font-size * 0.85;
   }
   
   h3 {
-    font-size: $h3-font-size * 0.9;
+    font-size: config.$h3-font-size * 0.9;
   }
   
   .display-1 {
@@ -231,4 +257,22 @@ hr {
   .display-4 {
     font-size: 2.5rem;
   }
+  
+  body {
+    font-size: config.$font-size-base * 0.9;
+  }
+}
+
+// Abbreviations and address
+abbr[title] {
+  text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+  text-decoration-skip-ink: none;
+}
+
+address {
+  margin-bottom: config.$spacer;
+  font-style: normal;
+  line-height: inherit;
 }

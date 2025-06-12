@@ -3,350 +3,758 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aesthetic CSS Framework - Demo</title>
+    <title>Aesthetic CSS Framework - Complete Demo</title>
     <!-- Link to the compiled CSS framework -->
     <link rel="stylesheet" href="../dist/aesthetic.css">
-    <style>
-        /* Demo-specific styles */
-        .demo-section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-        }
-        .demo-section h2 {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
-        }
-        .color-demo {
-            display: inline-block;
-            width: 100px;
-            height: 50px;
-            margin: 0.5rem;
-            text-align: center;
-            line-height: 50px;
-            border-radius: 4px;
-        }
-    </style>
+    <!-- Link to demo-specific styles -->
+    <link rel="stylesheet" href="/dist/demo-styles.css">
 </head>
 <body>
-    <!-- Header Section -->
-    <div class="container">
-        <header class="text-center py-5">
-            <h1 class="text-primary">Aesthetic CSS Framework</h1>
-            <p class="text-lg text-muted">A beautiful, lightweight CSS framework built with Sass</p>
-        </header>
-
-        <!-- Typography Demo -->
-        <section class="demo-section">
-            <h2>Typography</h2>
-            <div class="row">
-                <div class="col-6">
-                    <h3>Headings</h3>
-                    <h1>Heading 1</h1>
-                    <h2>Heading 2</h2>
-                    <h3>Heading 3</h3>
-                    <h4>Heading 4</h4>
-                    <h5>Heading 5</h5>
-                    <h6>Heading 6</h6>
-                </div>
-                <div class="col-6">
-                    <h3>Text Elements</h3>
-                    <p>This is a regular paragraph with some <strong>bold text</strong> and <em>italic text</em>.</p>
-                    <p><small>This is small text</small></p>
-                    <p><mark>This is highlighted text</mark></p>
-                    <p><del>This text is deleted</del></p>
-                    <p><ins>This text is inserted</ins></p>
-                    <p class="text-muted">This is muted text</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Font Size Utilities Demo -->
-        <section class="demo-section">
-            <h2>Font Size Utilities</h2>
-            <p class="text-xs">Extra small text (.text-xs)</p>
-            <p class="text-sm">Small text (.text-sm)</p>
-            <p class="text-md">Medium text (.text-md)</p>
-            <p class="text-lg">Large text (.text-lg)</p>
-            <p class="text-xl">Extra large text (.text-xl)</p>
-            <p class="text-xxl">Extra extra large text (.text-xxl)</p>
-        </section>
-
-        <!-- Typography Utilities Demo -->
-        <section class="demo-section">
-            <h2>Typography Utilities</h2>
-            <div class="row">
-                <div class="col-4">
-                    <h3>Font Weights</h3>
-                    <p class="font-light">Light text (.font-light)</p>
-                    <p class="font-normal">Normal text (.font-normal)</p>
-                    <p class="font-bold">Bold text (.font-bold)</p>
-                </div>
-                <div class="col-4">
-                    <h3>Text Transform</h3>
-                    <p class="text-lowercase">LOWERCASE TEXT (.text-lowercase)</p>
-                    <p class="text-uppercase">uppercase text (.text-uppercase)</p>
-                    <p class="text-capitalize">capitalize text (.text-capitalize)</p>
-                </div>
-                <div class="col-4">
-                    <h3>Text Alignment</h3>
-                    <p class="text-left">Left aligned text</p>
-                    <p class="text-center">Center aligned text</p>
-                    <p class="text-right">Right aligned text</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Color Utilities Demo -->
-        <section class="demo-section">
-            <h2>Color Utilities</h2>
-            <div class="row">
-                <div class="col-6">
-                    <h3>Text Colors</h3>
-                    <p class="text-primary">Primary text color</p>
-                    <p class="text-secondary">Secondary text color</p>
-                    <p class="text-success">Success text color</p>
-                    <p class="text-danger">Danger text color</p>
-                    <p class="text-warning">Warning text color</p>
-                    <p class="text-info">Info text color</p>
-                    <p class="text-dark">Dark text color</p>
-                    <p class="text-muted">Muted text color</p>
-                </div>
-                <div class="col-6">
-                    <h3>Background Colors</h3>
-                    <div class="bg-primary color-demo text-white">Primary</div>
-                    <div class="bg-secondary color-demo text-white">Secondary</div>
-                    <div class="bg-success color-demo text-white">Success</div>
-                    <div class="bg-danger color-demo text-white">Danger</div>
-                    <div class="bg-warning color-demo text-dark">Warning</div>
-                    <div class="bg-info color-demo text-white">Info</div>
-                    <div class="bg-light color-demo text-dark">Light</div>
-                    <div class="bg-dark color-demo text-white">Dark</div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Buttons Demo -->
-        <section class="demo-section">
-            <h2>Buttons</h2>
-            <div class="row">
-                <div class="col-6">
-                    <h3>Button Colors</h3>
-                    <button class="btn btn-primary">Primary</button>
-                    <button class="btn btn-secondary">Secondary</button>
-                    <button class="btn btn-success">Success</button>
-                    <button class="btn btn-danger">Danger</button>
-                    <button class="btn btn-warning">Warning</button>
-                    <button class="btn btn-info">Info</button>
-                </div>
-                <div class="col-6">
-                    <h3>Button Sizes & States</h3>
-                    <button class="btn btn-primary btn-sm">Small</button>
-                    <button class="btn btn-primary">Normal</button>
-                    <button class="btn btn-primary btn-lg">Large</button>
-                    <br><br>
-                    <button class="btn btn-outline-primary">Outline</button>
-                    <button class="btn btn-primary" disabled>Disabled</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Forms Demo -->
-        <section class="demo-section">
-            <h2>Forms</h2>
-            <div class="row">
-                <div class="col-6">
-                    <h3>Form Elements</h3>
-                    <form>
-                        <div class="form-group">
-                            <label for="email">Email address</label>
-                            <input type="email" class="form-control" id="email" placeholder="Enter email">
-                        </div>
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" class="form-control" id="password" placeholder="Password">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
-                        </div>
-                        <div class="form-group">
-                            <label for="country">Country</label>
-                            <select class="form-control" id="country">
-                                <option>Select a country</option>
-                                <option>United States</option>
-                                <option>Canada</option>
-                                <option>Mexico</option>
-                            </select>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-                <div class="col-6">
-                    <h3>Checkboxes & Radio</h3>
-                    <div class="form-group">
-                        <input type="checkbox" id="check1">
-                        <label for="check1">Option 1</label>
+    <!-- Animated Background -->
+    <div id="background"></div>
+    
+    <!-- Content Wrapper with Glass Effect -->
+    <div class="content-wrapper">
+        <!-- Header Section with Glass Effect -->
+        <div class="header-section">
+            <div class="container">
+                <header class="text-center" style="padding: 4rem 0;">
+                    <h1 class="display-2 text-primary">Aesthetic CSS Framework</h1>
+                    <p class="lead text-muted">A beautiful, lightweight CSS framework built with Sass</p>
+                    <p class="text-lg">Comprehensive demo showcasing all components and utilities</p>
+                    <div class="mt-4">
+                        <span class="badge bg-primary me-2">Modern</span>
+                        <span class="badge bg-success me-2">Responsive</span>
+                        <span class="badge bg-info me-2">Customizable</span>
+                        <span class="badge bg-warning">Lightweight</span>
                     </div>
-                    <div class="form-group">
-                        <input type="checkbox" id="check2">
-                        <label for="check2">Option 2</label>
+                      <!-- GitHub Repository Link -->
+                    <div class="mt-4">
+                        <a href="https://github.com/muoz0003/custom_css_framework" target="_blank" class="github-link">
+                            Check out the GitHub Repository!
+                        </a>
                     </div>
-                    <div class="form-group">
-                        <input type="radio" id="radio1" name="options">
-                        <label for="radio1">Choice A</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="radio" id="radio2" name="options">
-                        <label for="radio2">Choice B</label>
+                </header>
+            </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="nav-buttons">
+            <div class="container">
+                <div class="text-center">
+                    <h5 class="mb-3" style="color: #3f7cac;">Quick Navigation</h5>
+                    <div class="d-flex flex-wrap justify-content-center">
+                        <a href="#typography" class="nav-btn">Typography</a>
+                        <a href="#font-sizes" class="nav-btn">Font Sizes</a>
+                        <a href="#text-utilities" class="nav-btn">Text Utilities</a>
+                        <a href="#colors" class="nav-btn">Colors</a>
+                        <a href="#buttons" class="nav-btn">Buttons</a>
+                        <a href="#forms" class="nav-btn">Forms</a>
+                        <a href="#tables" class="nav-btn">Tables</a>
+                        <a href="#lists" class="nav-btn">Lists</a>
+                        <a href="#grid" class="nav-btn">Grid System</a>
+                        <a href="#spacing" class="nav-btn">Spacing</a>
+                        <a href="#display" class="nav-btn">Display</a>
+                        <a href="#borders" class="nav-btn">Borders</a>
+                        <a href="#code" class="nav-btn">Code</a>
+                        <a href="#responsive" class="nav-btn">Responsive</a>
+                        <a href="#features" class="nav-btn">Features</a>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
 
-        <!-- Tables Demo -->
-        <section class="demo-section">
-            <h2>Tables</h2>
-            <div class="row">
-                <div class="col-6">
-                    <h3>Basic Table</h3>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Email</th>
-                                <th>Role</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>John Doe</td>
-                                <td>john@example.com</td>
-                                <td>Developer</td>
-                            </tr>
-                            <tr>
-                                <td>Jane Smith</td>
-                                <td>jane@example.com</td>
-                                <td>Designer</td>
-                            </tr>
-                            <tr>
-                                <td>Bob Johnson</td>
-                                <td>bob@example.com</td>
-                                <td>Manager</td>
-                            </tr>
-                        </tbody>
-                    </table>
+        <div class="container">
+            <!-- Typography Demo -->
+            <section id="typography" class="demo-section">
+                <h2>Typography System</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Headings</h3>
+                        <h1>Heading 1 (h1)</h1>
+                        <h2>Heading 2 (h2)</h2>
+                        <h3>Heading 3 (h3)</h3>
+                        <h4>Heading 4 (h4)</h4>
+                        <h5>Heading 5 (h5)</h5>
+                        <h6>Heading 6 (h6)</h6>
+                        
+                        <h4>Display Headings</h4>
+                        <p class="display-4">Display 4</p>
+                        <p class="display-3">Display 3</p>
+                    </div>
+                    <div class="col-6">
+                        <h3>Text Elements</h3>
+                        <p>This is a regular paragraph with some <strong>bold text</strong> and <em>italic text</em>.</p>
+                        <p class="lead">This is a lead paragraph that stands out from regular text.</p>
+                        <p><small>This is small text using the small element</small></p>
+                        <p><mark>This is highlighted text using mark</mark></p>
+                        <p><del>This text is deleted</del> and <ins>this text is inserted</ins></p>
+                        <p class="text-muted">This is muted text for less emphasis</p>
+                        
+                        <blockquote>
+                            <p>This is a blockquote example showcasing quoted content with proper styling.</p>
+                            <footer>Someone famous</footer>
+                        </blockquote>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <h3>Striped Table</h3>
-                    <table class="table table-striped">
-                        <thead>
-                            <tr>
-                                <th>Product</th>
-                                <th>Price</th>
-                                <th>Stock</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Laptop</td>
-                                <td>$999</td>
-                                <td>15</td>
-                            </tr>
-                            <tr>
-                                <td>Mouse</td>
-                                <td>$25</td>
-                                <td>50</td>
-                            </tr>
-                            <tr>
-                                <td>Keyboard</td>
-                                <td>$75</td>
-                                <td>30</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Lists Demo -->
-        <section class="demo-section">
-            <h2>Lists</h2>
-            <div class="row">
-                <div class="col-4">
-                    <h3>Unordered List</h3>
-                    <ul>
-                        <li>First item</li>
-                        <li>Second item</li>
-                        <li>Third item</li>
-                    </ul>
+            <!-- Font Size Utilities Demo -->
+            <section id="font-sizes" class="demo-section">
+                <h2>Font Size Utilities</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Size Classes</h3>
+                        <p class="text-xs">Extra small text (.text-xs)</p>
+                        <p class="text-sm">Small text (.text-sm)</p>
+                        <p class="text-base">Base text (.text-base)</p>
+                        <p class="text-lg">Large text (.text-lg)</p>
+                        <p class="text-xl">Extra large text (.text-xl)</p>
+                        <p class="text-xxl">Extra extra large text (.text-xxl)</p>
+                    </div>
+                    <div class="col-6">
+                        <h3>Heading Utilities</h3>
+                        <p class="h1">Heading 1 style (.h1)</p>
+                        <p class="h2">Heading 2 style (.h2)</p>
+                        <p class="h3">Heading 3 style (.h3)</p>
+                        <p class="h4">Heading 4 style (.h4)</p>
+                        <p class="h5">Heading 5 style (.h5)</p>
+                        <p class="h6">Heading 6 style (.h6)</p>
+                    </div>
                 </div>
-                <div class="col-4">
-                    <h3>Ordered List</h3>
-                    <ol>
-                        <li>First step</li>
-                        <li>Second step</li>
-                        <li>Third step</li>
-                    </ol>
-                </div>
-                <div class="col-4">
-                    <h3>List Group</h3>
-                    <ul class="list-group">
-                        <li class="list-group-item">First item</li>
-                        <li class="list-group-item">Second item</li>
-                        <li class="list-group-item">Third item</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Spacing Utilities Demo -->
-        <section class="demo-section">
-            <h2>Spacing Utilities</h2>
-            <div class="row">
-                <div class="col-6">
-                    <h3>Margin Examples</h3>
-                    <div class="bg-light p-2 m-1">Margin 1 (.m-1)</div>
-                    <div class="bg-light p-2 m-2">Margin 2 (.m-2)</div>
-                    <div class="bg-light p-2 m-3">Margin 3 (.m-3)</div>
+            <!-- Text Utilities Demo -->
+            <section id="text-utilities" class="demo-section">
+                <h2>Text Utilities</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <h3>Font Weights</h3>
+                        <p class="fw-light">Light text (.fw-light)</p>
+                        <p class="fw-normal">Normal text (.fw-normal)</p>
+                        <p class="fw-medium">Medium text (.fw-medium)</p>
+                        <p class="fw-bold">Bold text (.fw-bold)</p>
+                    </div>
+                    <div class="col-4">
+                        <h3>Text Transform</h3>
+                        <p class="text-lowercase">LOWERCASE TEXT (.text-lowercase)</p>
+                        <p class="text-uppercase">uppercase text (.text-uppercase)</p>
+                        <p class="text-capitalize">capitalize text (.text-capitalize)</p>
+                    </div>
+                    <div class="col-4">
+                        <h3>Text Alignment</h3>
+                        <p class="text-start">Left aligned text (.text-start)</p>
+                        <p class="text-center">Center aligned text (.text-center)</p>
+                        <p class="text-end">Right aligned text (.text-end)</p>
+                        <p class="text-justify">Justified text that will wrap and justify properly when it gets long enough to demonstrate the effect (.text-justify)</p>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <h3>Padding Examples</h3>
-                    <div class="bg-light p-1">Padding 1 (.p-1)</div>
-                    <div class="bg-light p-2">Padding 2 (.p-2)</div>
-                    <div class="bg-light p-3">Padding 3 (.p-3)</div>
+                
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Text Decoration</h3>
+                        <p class="text-decoration-none">No decoration (.text-decoration-none)</p>
+                        <p class="text-decoration-underline">Underlined text (.text-decoration-underline)</p>
+                        <p class="text-decoration-line-through">Line through text (.text-decoration-line-through)</p>
+                    </div>
+                    <div class="col-6">
+                        <h3>Text Wrap</h3>
+                        <p class="text-wrap">This text will wrap normally (.text-wrap)</p>
+                        <p class="text-nowrap">This text will not wrap even if it gets very long (.text-nowrap)</p>
+                        <p class="text-truncate" style="width: 200px;">This text will be truncated with ellipsis (.text-truncate)</p>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <!-- Display Utilities Demo -->
-        <section class="demo-section">
-            <h2>Display Utilities</h2>
-            <h3>Flexbox Layout</h3>
-            <div class="d-flex justify-content-between align-items-center bg-light p-3">
-                <div>Left item</div>
-                <div>Center item</div>
-                <div>Right item</div>
-            </div>
-            
-            <h3 class="mt-3">Flex Column</h3>
-            <div class="d-flex flex-column align-items-center bg-light p-3">
-                <div class="mb-2">Item 1</div>
-                <div class="mb-2">Item 2</div>
-                <div>Item 3</div>
-            </div>
-        </section>
+            <!-- Color Utilities Demo -->
+            <section id="colors" class="demo-section">
+                <h2>Color System</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Text Colors</h3>
+                        <p class="text-primary">Primary text color (.text-primary)</p>
+                        <p class="text-secondary">Secondary text color (.text-secondary)</p>
+                        <p class="text-success">Success text color (.text-success)</p>
+                        <p class="text-danger">Danger text color (.text-danger)</p>
+                        <p class="text-warning">Warning text color (.text-warning)</p>
+                        <p class="text-info">Info text color (.text-info)</p>
+                        <p class="text-black">Black text color (.text-black)</p>
+                        <p class="text-muted">Muted text color (.text-muted)</p>
+                    </div>
+                    <div class="col-6">
+                        <h3>Background Colors</h3>
+                        <div class="bg-primary color-demo text-white">Primary</div>
+                        <div class="bg-secondary color-demo text-white">Secondary</div>
+                        <div class="bg-success color-demo text-white">Success</div>
+                        <div class="bg-danger color-demo text-white">Danger</div>
+                        <div class="bg-warning color-demo text-black">Warning</div>
+                        <div class="bg-info color-demo text-white">Info</div>
+                        <div class="bg-light color-demo text-black">Light</div>
+                        <div class="bg-dark color-demo text-white">Dark</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Buttons Demo -->
+            <section id="buttons" class="demo-section">
+                <h2>Button System</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Button Variants</h3>
+                        <div class="component-demo">
+                            <button class="btn btn-primary">Primary</button>
+                            <button class="btn btn-secondary">Secondary</button>
+                            <button class="btn btn-success">Success</button>
+                            <button class="btn btn-danger">Danger</button>
+                            <button class="btn btn-warning">Warning</button>
+                            <button class="btn btn-info">Info</button>
+                            <button class="btn btn-light">Light</button>
+                            <button class="btn btn-dark">Dark</button>
+                        </div>
+                        
+                        <h4>Outline Buttons</h4>
+                        <div class="component-demo">
+                            <button class="btn btn-outline-primary">Primary</button>
+                            <button class="btn btn-outline-secondary">Secondary</button>
+                            <button class="btn btn-outline-success">Success</button>
+                            <button class="btn btn-outline-danger">Danger</button>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h3>Button Sizes & States</h3>
+                        <div class="component-demo">
+                            <button class="btn btn-primary btn-sm">Small (.btn-sm)</button>
+                            <button class="btn btn-primary">Normal</button>
+                            <button class="btn btn-primary btn-lg">Large (.btn-lg)</button>
+                        </div>
+                        
+                        <h4>Button States</h4>
+                        <div class="component-demo">
+                            <button class="btn btn-primary">Normal</button>
+                            <button class="btn btn-primary active">Active</button>
+                            <button class="btn btn-primary" disabled>Disabled</button>
+                        </div>
+                        
+                        <h4>Button Types</h4>
+                        <div class="component-demo">
+                            <button class="btn btn-link">Link Button</button>
+                            <button class="btn btn-primary btn-block">Block Button</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Forms Demo -->
+            <section id="forms" class="demo-section">
+                <h2>Form System</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Form Controls</h3>
+                        <form class="component-demo">
+                            <div class="form-group">
+                                <label for="email">Email address</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter email">
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" id="password" placeholder="Password">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" id="message" rows="3" placeholder="Enter your message"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <select class="form-control" id="country">
+                                    <option>Select a country</option>
+                                    <option>United States</option>
+                                    <option>Canada</option>
+                                    <option>Mexico</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit Form</button>
+                        </form>
+                    </div>
+                    <div class="col-6">
+                        <h3>Form Sizes & Validation</h3>
+                        <div class="component-demo">
+                            <h5>Input Sizes</h5>
+                            <input type="text" class="form-control form-control-sm" placeholder="Small input">
+                            <br>
+                            <input type="text" class="form-control" placeholder="Normal input">
+                            <br>
+                            <input type="text" class="form-control form-control-lg" placeholder="Large input">
+                        </div>
+                        
+                        <h4>Checkboxes & Radio</h4>
+                        <div class="component-demo">
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="check1">
+                                <label class="form-check-label" for="check1">Option 1</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" class="form-check-input" id="check2">
+                                <label class="form-check-label" for="check2">Option 2</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="radio1" name="options">
+                                <label class="form-check-label" for="radio1">Choice A</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" class="form-check-input" id="radio2" name="options">
+                                <label class="form-check-label" for="radio2">Choice B</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tables Demo -->
+            <section id="tables" class="demo-section">
+                <h2>Table System</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Basic Table</h3>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Role</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>John Doe</td>
+                                    <td>john@example.com</td>
+                                    <td>Developer</td>
+                                </tr>
+                                <tr>
+                                    <td>Jane Smith</td>
+                                    <td>jane@example.com</td>
+                                    <td>Designer</td>
+                                </tr>
+                                <tr>
+                                    <td>Bob Johnson</td>
+                                    <td>bob@example.com</td>
+                                    <td>Manager</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-6">
+                        <h3>Table Variants</h3>
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Stock</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Laptop</td>
+                                    <td>$999</td>
+                                    <td>15</td>
+                                </tr>
+                                <tr>
+                                    <td>Mouse</td>
+                                    <td>$25</td>
+                                    <td>50</td>
+                                </tr>
+                                <tr>
+                                    <td>Keyboard</td>
+                                    <td>$75</td>
+                                    <td>30</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <small class="text-muted">Table with .table-striped and .table-hover</small>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lists Demo -->
+            <section id="lists" class="demo-section">
+                <h2>List System</h2>
+                <div class="row">
+                    <div class="col-4">
+                        <h3>Basic Lists</h3>
+                        <h5>Unordered List</h5>
+                        <ul>
+                            <li>First item</li>
+                            <li>Second item</li>
+                            <li>Third item</li>
+                        </ul>
+                        
+                        <h5>Ordered List</h5>
+                        <ol>
+                            <li>First step</li>
+                            <li>Second step</li>
+                            <li>Third step</li>
+                        </ol>
+                    </div>
+                    <div class="col-4">
+                        <h3>List Group</h3>
+                        <ul class="list-group">
+                            <li class="list-group-item">Basic item</li>
+                            <li class="list-group-item active">Active item</li>
+                            <li class="list-group-item">Third item</li>
+                            <li class="list-group-item disabled">Disabled item</li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h3>Utility Lists</h3>
+                        <h5>Unstyled List</h5>
+                        <ul class="list-unstyled">
+                            <li>No bullets</li>
+                            <li>Clean styling</li>
+                            <li>Simple layout</li>
+                        </ul>
+                        
+                        <h5>Inline List</h5>
+                        <ul class="list-inline">
+                            <li class="list-inline-item">Item 1</li>
+                            <li class="list-inline-item">Item 2</li>
+                            <li class="list-inline-item">Item 3</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Grid System Demo -->
+            <section id="grid" class="demo-section">
+                <h2>Grid System</h2>
+                <div class="component-demo">
+                    <h3>12-Column Grid</h3>
+                    <div class="row">
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                        <div class="col-1"><div style="background: #e9ecef; padding: 0.5rem; text-align: center;">1</div></div>
+                    </div>
+                    
+                    <h4>Common Layouts</h4>
+                    <div class="row">
+                        <div class="col-6"><div style="background: #d1ecf1; padding: 1rem; text-align: center;">.col-6</div></div>
+                        <div class="col-6"><div style="background: #d4edda; padding: 1rem; text-align: center;">.col-6</div></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-4"><div style="background: #d1ecf1; padding: 1rem; text-align: center;">.col-4</div></div>
+                        <div class="col-4"><div style="background: #d4edda; padding: 1rem; text-align: center;">.col-4</div></div>
+                        <div class="col-4"><div style="background: #ffeaa7; padding: 1rem; text-align: center;">.col-4</div></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Spacing Utilities Demo -->
+            <section id="spacing" class="demo-section">
+                <h2>Spacing System</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Margin Examples</h3>
+                        <div class="component-demo">
+                            <div style="background: #fff3cd; border: 1px dashed #856404;" class="m-1">Margin 1 (.m-1)</div>
+                            <div style="background: #fff3cd; border: 1px dashed #856404;" class="m-2">Margin 2 (.m-2)</div>
+                            <div style="background: #fff3cd; border: 1px dashed #856404;" class="m-3">Margin 3 (.m-3)</div>
+                            <div style="background: #fff3cd; border: 1px dashed #856404;" class="mx-auto" style="width: 200px;">Centered (.mx-auto)</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h3>Padding Examples</h3>
+                        <div class="component-demo">
+                            <div style="background: #d1ecf1; border: 1px solid #bee5eb;" class="p-1">Padding 1 (.p-1)</div>
+                            <div style="background: #d1ecf1; border: 1px solid #bee5eb;" class="p-2">Padding 2 (.p-2)</div>
+                            <div style="background: #d1ecf1; border: 1px solid #bee5eb;" class="p-3">Padding 3 (.p-3)</div>
+                            <div style="background: #d1ecf1; border: 1px solid #bee5eb;" class="py-4 px-2">Custom (.py-4 .px-2)</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Display Utilities Demo -->
+            <section id="display" class="demo-section">
+                <h2>Display & Layout Utilities</h2>
+                
+                <h3>Flexbox Examples</h3>
+                <div class="component-demo">
+                    <h5>Justify Content</h5>
+                    <div class="d-flex justify-content-start bg-light p-2 mb-2">
+                        <div style="background: #3f7cac; color: white; padding: 0.5rem;">Start</div>
+                    </div>
+                    <div class="d-flex justify-content-center bg-light p-2 mb-2">
+                        <div style="background: #5a9bd4; color: white; padding: 0.5rem;">Center</div>
+                    </div>
+                    <div class="d-flex justify-content-end bg-light p-2 mb-2">
+                        <div style="background: #7aa3e0; color: white; padding: 0.5rem;">End</div>
+                    </div>
+                    <div class="d-flex justify-content-between bg-light p-2 mb-2">
+                        <div style="background: #3f7cac; color: white; padding: 0.5rem;">Left</div>
+                        <div style="background: #5a9bd4; color: white; padding: 0.5rem;">Center</div>
+                        <div style="background: #7aa3e0; color: white; padding: 0.5rem;">Right</div>
+                    </div>
+                </div>
+                
+                <h3>Flex Direction</h3>
+                <div class="component-demo">
+                    <div class="d-flex flex-column align-items-center bg-light p-3">
+                        <div style="background: #3f7cac; color: white; padding: 0.5rem; margin: 0.25rem;">Item 1</div>
+                        <div style="background: #5a9bd4; color: white; padding: 0.5rem; margin: 0.25rem;">Item 2</div>
+                        <div style="background: #7aa3e0; color: white; padding: 0.5rem; margin: 0.25rem;">Item 3</div>
+                    </div>
+                    <small class="text-muted">Using .d-flex .flex-column .align-items-center</small>
+                </div>
+            </section>
+
+            <!-- Border Utilities Demo -->
+            <section id="borders" class="demo-section">
+                <h2>Border Utilities</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Border Styles</h3>
+                        <div class="component-demo">
+                            <div class="border p-2 mb-2">All borders (.border)</div>
+                            <div class="border-top p-2 mb-2">Top border (.border-top)</div>
+                            <div class="border-end p-2 mb-2">Right border (.border-end)</div>
+                            <div class="border-bottom p-2 mb-2">Bottom border (.border-bottom)</div>
+                            <div class="border-start p-2 mb-2">Left border (.border-start)</div>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <h3>Border Colors</h3>
+                        <div class="component-demo">
+                            <div class="border border-primary p-2 mb-2">Primary border</div>
+                            <div class="border border-success p-2 mb-2">Success border</div>
+                            <div class="border border-danger p-2 mb-2">Danger border</div>
+                            <div class="border border-warning p-2 mb-2">Warning border</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Code Examples -->
+            <section id="code" class="demo-section">
+                <h2>Code & Pre-formatted Text</h2>
+                <div class="row">
+                    <div class="col-6">
+                        <h3>Inline Code</h3>
+                        <p>Use the <code>&lt;code&gt;</code> element for inline code snippets.</p>
+                        <p>You can also use <code>.text-primary</code> class for styling.</p>
+                    </div>
+                    <div class="col-6">
+                        <h3>Code Blocks</h3>
+                        <pre><code>&lt;div class="container"&gt;
+  &lt;h1 class="text-primary"&gt;Hello World&lt;/h1&gt;
+  &lt;p class="lead"&gt;Framework demo&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Responsive Demo -->
+            <section id="responsive" class="demo-section">
+                <h2>Responsive Features</h2>
+                <div class="component-demo">
+                    <h3>Responsive Grid</h3>
+                    <div class="row">
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div style="background: #d1ecf1; padding: 1rem; text-align: center; margin-bottom: 1rem;">
+                                .col-12 .col-md-6 .col-lg-4
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div style="background: #d4edda; padding: 1rem; text-align: center; margin-bottom: 1rem;">
+                                .col-12 .col-md-6 .col-lg-4
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-6 col-lg-4">
+                            <div style="background: #ffeaa7; padding: 1rem; text-align: center; margin-bottom: 1rem;">
+                                .col-12 .col-md-6 .col-lg-4
+                            </div>
+                        </div>
+                    </div>
+                    <small class="text-muted">Resize your browser to see responsive behavior</small>
+                </div>
+            </section>
+
+            <!-- Framework Stats -->
+            <section id="features" class="demo-section">
+                <h2>Framework Features</h2>
+                <div class="row text-center">
+                    <div class="col-3">
+                        <h1 class="display-4 text-primary">8+</h1>
+                        <p>Base Components</p>
+                    </div>
+                    <div class="col-3">
+                        <h1 class="display-4 text-success">50+</h1>
+                        <p>Utility Classes</p>
+                    </div>
+                    <div class="col-3">
+                        <h1 class="display-4 text-info">12</h1>
+                        <p>Grid Columns</p>
+                    </div>
+                    <div class="col-3">
+                        <h1 class="display-4 text-warning">4</h1>
+                        <p>Breakpoints</p>
+                    </div>
+                </div>
+            </section>
+        </div>
 
         <!-- Footer -->
-        <footer class="text-center py-4 mt-5 border-top">
-            <p class="text-muted">
-                Aesthetic CSS Framework Demo - 
-                Created by David Muñoz Jensen, Chuhong Feng, Solomon Tesfaye, and Luz Helena Rodriguez
-            </p>
+        <footer class="footer-section text-center" style="padding: 3rem 0; margin-top: 3rem;">
+            <div class="container">
+                <h4>Aesthetic CSS Framework</h4>
+                <p class="text-muted mb-2">
+                    Created by: <strong>David Muñoz Jensen</strong>, <strong>Chuhong Feng</strong>, 
+                    <strong>Solomon Tesfaye</strong>, and <strong>Luz Helena Rodriguez</strong>
+                </p>
+                <p class="text-sm text-muted">
+                    A comprehensive, modern CSS framework built with Sass • 2025
+                </p>
+                <div class="d-flex justify-content-center">
+                    <span class="badge bg-primary me-2">Responsive</span>
+                    <span class="badge bg-success me-2">Customizable</span>
+                    <span class="badge bg-info me-2">Lightweight</span>
+                    <span class="badge bg-warning">Modern</span>
+                </div>
+            </div>
         </footer>
     </div>
+
+    <script>
+        // Add interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Enhanced smooth scrolling for navigation buttons
+            document.querySelectorAll('.nav-btn').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        // Remove active class from all nav buttons
+                        document.querySelectorAll('.nav-btn').forEach(btn => btn.classList.remove('active'));
+                        // Add active class to clicked button
+                        this.classList.add('active');
+                        
+                        // Smooth scroll to target with offset for fixed nav
+                        const offsetTop = target.offsetTop - 100;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+
+            // Update active navigation button on scroll
+            const sections = document.querySelectorAll('section[id]');
+            const navButtons = document.querySelectorAll('.nav-btn');
+            
+            window.addEventListener('scroll', function() {
+                let current = '';
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop && window.pageYOffset < sectionTop + sectionHeight) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navButtons.forEach(btn => {
+                    btn.classList.remove('active');
+                    if (btn.getAttribute('href') === '#' + current) {
+                        btn.classList.add('active');
+                    }
+                });
+            });
+
+            // Add hover effects to demo sections
+            document.querySelectorAll('.demo-section').forEach(section => {
+                section.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-2px)';
+                    this.style.boxShadow = '0 8px 25px rgba(63, 124, 172, 0.15)';
+                    this.style.transition = 'all 0.3s ease';
+                });
+
+                section.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '0 8px 32px rgba(63, 124, 172, 0.1)';
+                });
+            });
+
+            // Enhanced parallax effect to header
+            window.addEventListener('scroll', function() {
+                const scrolled = window.pageYOffset;
+                const header = document.querySelector('.header-section');
+                if (header) {
+                    header.style.transform = `translateY(${scrolled * 0.3}px)`;
+                    header.style.opacity = Math.max(0.3, 1 - scrolled / 500);
+                }
+            });
+
+            // Add subtle animations to color demo boxes
+            document.querySelectorAll('.color-demo').forEach(demo => {
+                demo.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.05) rotate(2deg)';
+                    this.style.transition = 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)';
+                    this.style.zIndex = '10';
+                });
+
+                demo.addEventListener('mouseleave', function() {
+                    this.style.transform = 'scale(1) rotate(0deg)';
+                    this.style.zIndex = '1';
+                });
+            });
+
+            // Add pulse effect to buttons on hover
+            document.querySelectorAll('.btn').forEach(btn => {
+                btn.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-1px)';
+                    this.style.boxShadow = '0 4px 12px rgba(63, 124, 172, 0.3)';
+                    this.style.transition = 'all 0.2s ease';
+                });
+
+                btn.addEventListener('mouseleave', function() {
+                    this.style.transform = 'translateY(0)';
+                    this.style.boxShadow = '';
+                });
+            });
+
+            // Add typing effect to main title
+            const title = document.querySelector('h1.display-2');
+            if (title) {
+                const text = title.textContent;
+                title.textContent = '';
+                title.style.borderRight = '2px solid #3f7cac';
+                
+                let i = 0;
+                const typeWriter = () => {
+                    if (i < text.length) {
+                        title.textContent += text.charAt(i);
+                        i++;
+                        setTimeout(typeWriter, 100);
+                    } else {
+                        // Remove cursor after typing is complete
+                        setTimeout(() => {
+                            title.style.borderRight = 'none';
+                        }, 1000);
+                    }
+                };
+                
+                // Start typing effect after a short delay
+                setTimeout(typeWriter, 500);
+            }
+        });
+    </script>
 </body>
 </html>

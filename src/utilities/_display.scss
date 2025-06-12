@@ -2,121 +2,435 @@
 // DISPLAY UTILITIES - Luz Helena's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables (David will create these)
+
 @use '../variables/config' as config;
 @use '../variables/colors' as colors;
 
-
-
-
-.d-none {
-  display: none;
-}
-.d-block {
-  display: block;
-}
-.d-inline {
-  display: inline;
-}
-.d-inline-block {
-  display: inline-block;
-}
-.d-flex {
-  display: flex;
-}
-.d-inline-flex {
-  display: inline-flex;
-}
-
-
-
-.flex-row {
-  flex-direction: row;
-}
-.flex-column {
-  flex-direction: column;
-}
-.flex-wrap {
-  flex-wrap: wrap;
-}
-.flex-nowrap {
-  flex-wrap: nowrap;
-}
-
-
-.justify-content-start {
-  justify-content: flex-start;
-}
-.justify-content-center {
-  justify-content: center;
-}
-.justify-content-end {
-  justify-content: flex-end;
-}
-.justify-content-between {
-  justify-content: space-between;
-}
-.align-items-start {
-  align-items: flex-start;
-}
-.align-items-center {
-  align-items: center;
-}
-.align-items-end {
-  align-items: flex-end;
-}
-
-
-
-
+// Basic display utilities
 .d-none {
   display: none !important;
 }
+
 .d-block {
   display: block !important;
 }
+
+.d-inline {
+  display: inline !important;
+}
+
+.d-inline-block {
+  display: inline-block !important;
+}
+
 .d-flex {
   display: flex !important;
 }
 
-.d-none{ 
-  display: none !important; 
-}
-.d-block  { 
-  display: block !important; 
-}
-.d-inline  { 
-  display: inline !important; 
-}
-.d-inline-block {
-   display: inline-block !important; 
-  }
-.d-flex { 
-  display: flex !important; 
-}
-.d-inline-flex { 
-  display: inline-flex !important; 
+.d-inline-flex {
+  display: inline-flex !important;
 }
 
-@each $breakpoint, $min-width in (
+.d-grid {
+  display: grid !important;
+}
+
+.d-table {
+  display: table !important;
+}
+
+.d-table-row {
+  display: table-row !important;
+}
+
+.d-table-cell {
+  display: table-cell !important;
+}
+
+// Flexbox direction utilities
+.flex-row {
+  flex-direction: row !important;
+}
+
+.flex-row-reverse {
+  flex-direction: row-reverse !important;
+}
+
+.flex-column {
+  flex-direction: column !important;
+}
+
+.flex-column-reverse {
+  flex-direction: column-reverse !important;
+}
+
+// Flexbox wrap utilities
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
+
+.flex-wrap-reverse {
+  flex-wrap: wrap-reverse !important;
+}
+
+// Flexbox justify-content utilities
+.justify-content-start {
+  justify-content: flex-start !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-end {
+  justify-content: flex-end !important;
+}
+
+.justify-content-between {
+  justify-content: space-between !important;
+}
+
+.justify-content-around {
+  justify-content: space-around !important;
+}
+
+.justify-content-evenly {
+  justify-content: space-evenly !important;
+}
+
+// Flexbox align-items utilities
+.align-items-start {
+  align-items: flex-start !important;
+}
+
+.align-items-center {
+  align-items: center !important;
+}
+
+.align-items-end {
+  align-items: flex-end !important;
+}
+
+.align-items-stretch {
+  align-items: stretch !important;
+}
+
+.align-items-baseline {
+  align-items: baseline !important;
+}
+
+// Flexbox align-content utilities
+.align-content-start {
+  align-content: flex-start !important;
+}
+
+.align-content-center {
+  align-content: center !important;
+}
+
+.align-content-end {
+  align-content: flex-end !important;
+}
+
+.align-content-between {
+  align-content: space-between !important;
+}
+
+.align-content-around {
+  align-content: space-around !important;
+}
+
+.align-content-stretch {
+  align-content: stretch !important;
+}
+
+// Flexbox align-self utilities
+.align-self-auto {
+  align-self: auto !important;
+}
+
+.align-self-start {
+  align-self: flex-start !important;
+}
+
+.align-self-center {
+  align-self: center !important;
+}
+
+.align-self-end {
+  align-self: flex-end !important;
+}
+
+.align-self-stretch {
+  align-self: stretch !important;
+}
+
+.align-self-baseline {
+  align-self: baseline !important;
+}
+
+// Flexbox grow and shrink utilities
+.flex-fill {
+  flex: 1 1 auto !important;
+}
+
+.flex-grow-0 {
+  flex-grow: 0 !important;
+}
+
+.flex-grow-1 {
+  flex-grow: 1 !important;
+}
+
+.flex-shrink-0 {
+  flex-shrink: 0 !important;
+}
+
+.flex-shrink-1 {
+  flex-shrink: 1 !important;
+}
+
+// Position utilities
+.position-static {
+  position: static !important;
+}
+
+.position-relative {
+  position: relative !important;
+}
+
+.position-absolute {
+  position: absolute !important;
+}
+
+.position-fixed {
+  position: fixed !important;
+}
+
+.position-sticky {
+  position: sticky !important;
+}
+
+// Top, right, bottom, left utilities
+.top-0 {
+  top: 0 !important;
+}
+
+.top-50 {
+  top: 50% !important;
+}
+
+.top-100 {
+  top: 100% !important;
+}
+
+.start-0 {
+  left: 0 !important;
+}
+
+.start-50 {
+  left: 50% !important;
+}
+
+.start-100 {
+  left: 100% !important;
+}
+
+.end-0 {
+  right: 0 !important;
+}
+
+.end-50 {
+  right: 50% !important;
+}
+
+.end-100 {
+  right: 100% !important;
+}
+
+.bottom-0 {
+  bottom: 0 !important;
+}
+
+.bottom-50 {
+  bottom: 50% !important;
+}
+
+.bottom-100 {
+  bottom: 100% !important;
+}
+
+// Transform utilities for centering
+.translate-middle {
+  transform: translate(-50%, -50%) !important;
+}
+
+.translate-middle-x {
+  transform: translateX(-50%) !important;
+}
+
+.translate-middle-y {
+  transform: translateY(-50%) !important;
+}
+
+// Responsive display utilities
+$breakpoints: (
   sm: config.$breakpoint-sm,
   md: config.$breakpoint-md,
   lg: config.$breakpoint-lg,
   xl: config.$breakpoint-xl
-) {
-  @media (min-width: #{$min-width}) {
-    .d-#{$breakpoint}-none        { display: none !important; }
-    .d-#{$breakpoint}-block       { display: block !important; }
-    .d-#{$breakpoint}-inline      { display: inline !important; }
-    .d-#{$breakpoint}-inline-block { display: inline-block !important; }
-    .d-#{$breakpoint}-flex        { display: flex !important; }
-    .d-#{$breakpoint}-inline-flex { display: inline-flex !important; }
+);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .d-#{$breakpoint-name}-none {
+      display: none !important;
+    }
+    
+    .d-#{$breakpoint-name}-block {
+      display: block !important;
+    }
+    
+    .d-#{$breakpoint-name}-inline {
+      display: inline !important;
+    }
+    
+    .d-#{$breakpoint-name}-inline-block {
+      display: inline-block !important;
+    }
+    
+    .d-#{$breakpoint-name}-flex {
+      display: flex !important;
+    }
+    
+    .d-#{$breakpoint-name}-inline-flex {
+      display: inline-flex !important;
+    }
+    
+    .d-#{$breakpoint-name}-grid {
+      display: grid !important;
+    }
+    
+    .d-#{$breakpoint-name}-table {
+      display: table !important;
+    }
+    
+    .d-#{$breakpoint-name}-table-row {
+      display: table-row !important;
+    }
+    
+    .d-#{$breakpoint-name}-table-cell {
+      display: table-cell !important;
+    }
   }
 }
 
-// NOTES:
-// - Use !important to ensure utility classes override other styles
-// - These utilities are commonly used for layout and positioning
-// - Test flex utilities with different content to ensure proper behavior
-// - Display utilities are essential for responsive design
-// - Consider responsive variants for better mobile experience
+// Responsive flex utilities
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .flex-#{$breakpoint-name}-row {
+      flex-direction: row !important;
+    }
+    
+    .flex-#{$breakpoint-name}-row-reverse {
+      flex-direction: row-reverse !important;
+    }
+    
+    .flex-#{$breakpoint-name}-column {
+      flex-direction: column !important;
+    }
+    
+    .flex-#{$breakpoint-name}-column-reverse {
+      flex-direction: column-reverse !important;
+    }
+    
+    .flex-#{$breakpoint-name}-wrap {
+      flex-wrap: wrap !important;
+    }
+    
+    .flex-#{$breakpoint-name}-nowrap {
+      flex-wrap: nowrap !important;
+    }
+    
+    .justify-content-#{$breakpoint-name}-start {
+      justify-content: flex-start !important;
+    }
+    
+    .justify-content-#{$breakpoint-name}-center {
+      justify-content: center !important;
+    }
+    
+    .justify-content-#{$breakpoint-name}-end {
+      justify-content: flex-end !important;
+    }
+    
+    .justify-content-#{$breakpoint-name}-between {
+      justify-content: space-between !important;
+    }
+    
+    .justify-content-#{$breakpoint-name}-around {
+      justify-content: space-around !important;
+    }
+    
+    .align-items-#{$breakpoint-name}-start {
+      align-items: flex-start !important;
+    }
+    
+    .align-items-#{$breakpoint-name}-center {
+      align-items: center !important;
+    }
+    
+    .align-items-#{$breakpoint-name}-end {
+      align-items: flex-end !important;
+    }
+    
+    .align-items-#{$breakpoint-name}-stretch {
+      align-items: stretch !important;
+    }
+  }
+}
+
+// Overflow utilities
+.overflow-auto {
+  overflow: auto !important;
+}
+
+.overflow-hidden {
+  overflow: hidden !important;
+}
+
+.overflow-visible {
+  overflow: visible !important;
+}
+
+.overflow-scroll {
+  overflow: scroll !important;
+}
+
+.overflow-x-auto {
+  overflow-x: auto !important;
+}
+
+.overflow-x-hidden {
+  overflow-x: hidden !important;
+}
+
+.overflow-x-scroll {
+  overflow-x: scroll !important;
+}
+
+.overflow-y-auto {
+  overflow-y: auto !important;
+}
+
+.overflow-y-hidden {
+  overflow-y: hidden !important;
+}
+
+.overflow-y-scroll {
+  overflow-y: scroll !important;
+}

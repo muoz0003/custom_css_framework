@@ -2,86 +2,274 @@
 // BORDER UTILITIES - Solomon's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables
-@import '../variables/config';
-@import '../variables/colors';
 
-// Step 2: Basic border utilities
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
+
+// Basic border utilities
 .border {
-  border: $border-width solid $border-color !important;
+  border: config.$border-width solid colors.$border-color !important;
 }
 
-.border-none {
-  border: none !important;
+.border-0 {
+  border: 0 !important;
 }
 
-.border-thick {
-  border-width: 2px !important;
-}
-
-// Step 3: Border sides
 .border-top {
-  border-top: $border-width solid $border-color !important;
+  border-top: config.$border-width solid colors.$border-color !important;
+}
+
+.border-top-0 {
+  border-top: 0 !important;
+}
+
+.border-end {
+  border-right: config.$border-width solid colors.$border-color !important;
+}
+
+.border-end-0 {
+  border-right: 0 !important;
 }
 
 .border-bottom {
-  border-bottom: $border-width solid $border-color !important;
+  border-bottom: config.$border-width solid colors.$border-color !important;
 }
 
+.border-bottom-0 {
+  border-bottom: 0 !important;
+}
+
+.border-start {
+  border-left: config.$border-width solid colors.$border-color !important;
+}
+
+.border-start-0 {
+  border-left: 0 !important;
+}
+
+// Legacy border direction classes (for compatibility)
 .border-left {
-  border-left: $border-width solid $border-color !important;
+  border-left: config.$border-width solid colors.$border-color !important;
 }
 
 .border-right {
-  border-right: $border-width solid $border-color !important;
+  border-right: config.$border-width solid colors.$border-color !important;
 }
 
-// Step 4: Rounded borders
-.border-rounded {
-  border-radius: $border-radius !important;
+// Border width utilities
+.border-1 {
+  border-width: 1px !important;
 }
 
-.border-pill {
+.border-2 {
+  border-width: 2px !important;
+}
+
+.border-3 {
+  border-width: 3px !important;
+}
+
+.border-4 {
+  border-width: 4px !important;
+}
+
+.border-5 {
+  border-width: 5px !important;
+}
+
+// Border radius utilities
+.rounded {
+  border-radius: config.$border-radius !important;
+}
+
+.rounded-0 {
+  border-radius: 0 !important;
+}
+
+.rounded-1 {
+  border-radius: config.$border-radius-sm !important;
+}
+
+.rounded-2 {
+  border-radius: config.$border-radius !important;
+}
+
+.rounded-3 {
+  border-radius: config.$border-radius-lg !important;
+}
+
+.rounded-circle {
+  border-radius: 50% !important;
+}
+
+.rounded-pill {
   border-radius: 50rem !important;
 }
 
-// Step 5: Border color utilities (uses variables from _colors.scss)
+// Individual corner radius utilities
+.rounded-top {
+  border-top-left-radius: config.$border-radius !important;
+  border-top-right-radius: config.$border-radius !important;
+}
+
+.rounded-end {
+  border-top-right-radius: config.$border-radius !important;
+  border-bottom-right-radius: config.$border-radius !important;
+}
+
+.rounded-bottom {
+  border-bottom-left-radius: config.$border-radius !important;
+  border-bottom-right-radius: config.$border-radius !important;
+}
+
+.rounded-start {
+  border-top-left-radius: config.$border-radius !important;
+  border-bottom-left-radius: config.$border-radius !important;
+}
+
+// Border color utilities
 .border-primary {
-  border-color: $primary-color !important;
+  border-color: colors.$primary-color !important;
 }
 
 .border-secondary {
-  border-color: $secondary-color !important;
+  border-color: colors.$secondary-color !important;
 }
 
 .border-success {
-  border-color: $success-color !important;
+  border-color: colors.$success-color !important;
 }
 
 .border-danger {
-  border-color: $danger-color !important;
+  border-color: colors.$danger-color !important;
 }
 
 .border-warning {
-  border-color: $warning-color !important;
+  border-color: colors.$warning-color !important;
 }
 
 .border-info {
-  border-color: $info-color !important;
+  border-color: colors.$info-color !important;
 }
 
 .border-light {
-  border-color: #f8f9fa !important;
+  border-color: colors.$gray-200 !important;
 }
 
 .border-dark {
-  border-color: #343a40 !important;
+  border-color: colors.$gray-700 !important;
 }
 
 .border-white {
-  border-color: #ffffff !important;
+  border-color: colors.$white !important;
 }
 
-.border-black {
-  border-color: #000000 !important;
+.border-transparent {
+  border-color: transparent !important;
+}
+
+// Border style utilities
+.border-solid {
+  border-style: solid !important;
+}
+
+.border-dashed {
+  border-style: dashed !important;
+}
+
+.border-dotted {
+  border-style: dotted !important;
+}
+
+.border-double {
+  border-style: double !important;
+}
+
+.border-none {
+  border-style: none !important;
+}
+
+// Border opacity utilities
+.border-opacity-10 {
+  border-color: rgba(colors.$border-color, 0.1) !important;
+}
+
+.border-opacity-25 {
+  border-color: rgba(colors.$border-color, 0.25) !important;
+}
+
+.border-opacity-50 {
+  border-color: rgba(colors.$border-color, 0.5) !important;
+}
+
+.border-opacity-75 {
+  border-color: rgba(colors.$border-color, 0.75) !important;
+}
+
+// Responsive border utilities
+$breakpoints: (
+  sm: config.$breakpoint-sm,
+  md: config.$breakpoint-md,
+  lg: config.$breakpoint-lg,
+  xl: config.$breakpoint-xl
+);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .border-#{$breakpoint-name} {
+      border: config.$border-width solid colors.$border-color !important;
+    }
+    
+    .border-#{$breakpoint-name}-0 {
+      border: 0 !important;
+    }
+    
+    .border-#{$breakpoint-name}-top {
+      border-top: config.$border-width solid colors.$border-color !important;
+    }
+    
+    .border-#{$breakpoint-name}-top-0 {
+      border-top: 0 !important;
+    }
+    
+    .border-#{$breakpoint-name}-end {
+      border-right: config.$border-width solid colors.$border-color !important;
+    }
+    
+    .border-#{$breakpoint-name}-end-0 {
+      border-right: 0 !important;
+    }
+    
+    .border-#{$breakpoint-name}-bottom {
+      border-bottom: config.$border-width solid colors.$border-color !important;
+    }
+    
+    .border-#{$breakpoint-name}-bottom-0 {
+      border-bottom: 0 !important;
+    }
+    
+    .border-#{$breakpoint-name}-start {
+      border-left: config.$border-width solid colors.$border-color !important;
+    }
+    
+    .border-#{$breakpoint-name}-start-0 {
+      border-left: 0 !important;
+    }
+    
+    .rounded-#{$breakpoint-name} {
+      border-radius: config.$border-radius !important;
+    }
+    
+    .rounded-#{$breakpoint-name}-0 {
+      border-radius: 0 !important;
+    }
+    
+    .rounded-#{$breakpoint-name}-circle {
+      border-radius: 50% !important;
+    }
+    
+    .rounded-#{$breakpoint-name}-pill {
+      border-radius: 50rem !important;
+    }
+  }
 }

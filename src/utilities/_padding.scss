@@ -2,55 +2,189 @@
 // PADDING UTILITIES - Chuhong's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables (David will create these)
-// @import '../variables/config';
-// @import '../variables/colors';
 
-// Step 2: Create basic padding utilities
-// TODO: Add classes for:
-// - .p-0, .p-1, .p-2, .p-3, .p-4, .p-5 (all sides padding)
-// - Use the $spacers map from config for consistent spacing
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
 
-// Step 3: Create directional padding utilities
-// TODO: Add classes for:
-// - .pt-0 through .pt-5 (padding-top)
-// - .pb-0 through .pb-5 (padding-bottom)
-// - .pl-0 through .pl-5 (padding-left)
-// - .pr-0 through .pr-5 (padding-right)
 
-// Step 4: Create axis padding utilities
-// TODO: Add classes for:
-// - .px-0 through .px-5 (padding left and right)
-// - .py-0 through .py-5 (padding top and bottom)
+$spacers: (
+  0: 0,
+  1: 0.25rem,
+  2: 0.5rem,
+  3: 1rem,
+  4: 1.5rem,
+  5: 3rem
+) !default;
 
-// Example structure:
-/*
-.p-0 {
-  padding: 0 !important;
+// Use config spacers if available, otherwise use local spacers
+$spacer-map: if(variable-exists('config.$spacers'), config.$spacers, $spacers);
+
+// Generate all sides padding utilities
+@each $key, $value in $spacer-map {
+  .p-#{$key} {
+    padding: $value !important;
+  }
 }
 
-.p-1 {
-  padding: 0.25rem !important; // Use $spacers map value later
+// Generate directional padding utilities
+// Padding Top
+@each $key, $value in $spacer-map {
+  .pt-#{$key} {
+    padding-top: $value !important;
+  }
 }
 
-.pt-2 {
-  padding-top: 0.5rem !important; // Use $spacers map value later
+// Padding Bottom
+@each $key, $value in $spacer-map {
+  .pb-#{$key} {
+    padding-bottom: $value !important;
+  }
 }
 
-.px-3 {
-  padding-left: 1rem !important; // Use $spacers map value later
-  padding-right: 1rem !important;
+// Padding Left
+@each $key, $value in $spacer-map {
+  .pl-#{$key} {
+    padding-left: $value !important;
+  }
 }
 
-.py-4 {
-  padding-top: 1.5rem !important; // Use $spacers map value later
-  padding-bottom: 1.5rem !important;
+// Padding Right
+@each $key, $value in $spacer-map {
+  .pr-#{$key} {
+    padding-right: $value !important;
+  }
 }
-*/
 
-// NOTES:
-// - Wait for David to create variables and $spacers map before using them
-// - Use !important to ensure utility classes override other styles
-// - Test with different elements to ensure proper spacing
-// - Padding affects the element's internal space (unlike margin)
-// - Consider creating a loop to generate classes from $spacers map
+// Generate axis padding utilities
+// Padding X-axis (left and right)
+@each $key, $value in $spacer-map {
+  .px-#{$key} {
+    padding-left: $value !important;
+    padding-right: $value !important;
+  }
+}
+
+// Padding Y-axis (top and bottom)
+@each $key, $value in $spacer-map {
+  .py-#{$key} {
+    padding-top: $value !important;
+    padding-bottom: $value !important;
+  }
+}
+
+// Generate responsive padding utilities
+$breakpoints: (
+  sm: config.$breakpoint-sm,
+  md: config.$breakpoint-md,
+  lg: config.$breakpoint-lg,
+  xl: config.$breakpoint-xl
+);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    // All sides padding
+    @each $key, $value in $spacer-map {
+      .p-#{$breakpoint-name}-#{$key} {
+        padding: $value !important;
+      }
+    }
+
+    // Directional padding
+    @each $key, $value in $spacer-map {
+      .pt-#{$breakpoint-name}-#{$key} {
+        padding-top: $value !important;
+      }
+      
+      .pb-#{$breakpoint-name}-#{$key} {
+        padding-bottom: $value !important;
+      }
+      
+      .pl-#{$breakpoint-name}-#{$key} {
+        padding-left: $value !important;
+      }
+      
+      .pr-#{$breakpoint-name}-#{$key} {
+        padding-right: $value !important;
+      }
+    }
+
+    // Axis padding
+    @each $key, $value in $spacer-map {
+      .px-#{$breakpoint-name}-#{$key} {
+        padding-left: $value !important;
+        padding-right: $value !important;
+      }
+      
+      .py-#{$breakpoint-name}-#{$key} {
+        padding-top: $value !important;
+        padding-bottom: $value !important;
+      }
+    }
+  }
+}
+
+// Auto padding utilities
+.p-auto {
+  padding: auto !important;
+}
+
+.pt-auto {
+  padding-top: auto !important;
+}
+
+.pb-auto {
+  padding-bottom: auto !important;
+}
+
+.pl-auto {
+  padding-left: auto !important;
+}
+
+.pr-auto {
+  padding-right: auto !important;
+}
+
+.px-auto {
+  padding-left: auto !important;
+  padding-right: auto !important;
+}
+
+.py-auto {
+  padding-top: auto !important;
+  padding-bottom: auto !important;
+}
+
+// Responsive auto padding utilities
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .p-#{$breakpoint-name}-auto {
+      padding: auto !important;
+    }
+
+    .pt-#{$breakpoint-name}-auto {
+      padding-top: auto !important;
+    }
+
+    .pb-#{$breakpoint-name}-auto {
+      padding-bottom: auto !important;
+    }
+
+    .pl-#{$breakpoint-name}-auto {
+      padding-left: auto !important;
+    }
+
+    .pr-#{$breakpoint-name}-auto {
+      padding-right: auto !important;
+    }
+
+    .px-#{$breakpoint-name}-auto {
+      padding-left: auto !important;
+      padding-right: auto !important;
+    }
+
+    .py-#{$breakpoint-name}-auto {
+      padding-top: auto !important;
+      padding-bottom: auto !important;
+    }
+  }
+}

@@ -2,120 +2,249 @@
 // FONT SIZE UTILITIES - Luz Helena's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables (David will create these)
+
 @use '../variables/config' as config;
 @use '../variables/colors' as colors;
 
-
-// Step 2: Create basic font size utilities
-
-.text-xs  {
-  font-size: 0.75rem !important;   
-}
-
-.text-sm  {
-  font-size: 0.875rem !important;    
-}
-
-.text-md  {
-  font-size: 1rem !important;        
-}
-
-.text-lg  {
-  font-size: 1.25rem !important;     
-}
-
-.text-xl  {
-  font-size: 1.5rem !important;    
-}
-
-.text-xxl {
-  font-size: 2rem !important;        
-}
-
-
-.h1 {
-  font-size: 2.5rem !important;
-}
-
-.h2 {
-  font-size: 2rem !important;
-}
-
-.h3 {
-  font-size: 1.75rem !important;
-}
-
-.h4 {
-  font-size: 1.5rem !important;
-}
-
-.h5 {
-  font-size: 1.25rem !important;
-}
-
-.h6 {
-  font-size: 1rem !important;
-}
-
-
-@media (min-width: config.$breakpoint-lg) {
-  .text-sm-lg {
-    font-size: 1.25rem !important; // Small on mobile, large on desktop
-  }
-
-  .text-md-xl {
-    font-size: 1.5rem !important; // Medium on mobile, XL on desktop
-  }
-}
-
+// basic font size utilities using config variables
 .text-xs {
-  font-size: config.$font-size-xs !important; // 0.75rem, texto extra pequeño
+  font-size: config.$font-size-xs !important;
 }
 
 .text-sm {
-  font-size: config.$font-size-sm !important; // 0.875rem, texto pequeño
+  font-size: config.$font-size-sm !important;
 }
 
 .text-md {
-  font-size: config.$font-size-md !important; // 1rem, texto base
+  font-size: config.$font-size-md !important;
 }
 
 .text-lg {
-  font-size: config.$font-size-lg !important; // 1.25rem, texto grande
+  font-size: config.$font-size-lg !important;
 }
 
 .text-xl {
-  font-size: config.$font-size-xl !important; // 1.5rem, texto extra grande
+  font-size: config.$font-size-xl !important;
 }
 
 .text-xxl {
-  font-size: config.$font-size-xxl !important; // 2rem, texto muy grande
+  font-size: config.$font-size-xxl !important;
 }
 
-// UTILIDADES DE TÍTULOS (SIN CAMBIAR LA SEMÁNTICA)
+// Base font size utility
+.text-base {
+  font-size: config.$font-size-base !important;
+}
 
+// Heading utility classes (without semantic meaning)
 .h1 {
-  font-size: config.$h1-font-size !important; // 2.5rem, tamaño de H1
+  font-size: config.$h1-font-size !important;
+  font-weight: config.$font-weight-bold !important;
+  line-height: 1.2 !important;
 }
 
 .h2 {
-  font-size: config.$h2-font-size !important; // 2rem, tamaño de H2
+  font-size: config.$h2-font-size !important;
+  font-weight: config.$font-weight-bold !important;
+  line-height: 1.2 !important;
 }
 
 .h3 {
-  font-size: config.$h3-font-size !important; // 1.75rem
+  font-size: config.$h3-font-size !important;
+  font-weight: config.$font-weight-bold !important;
+  line-height: 1.2 !important;
 }
 
 .h4 {
-  font-size: config.$h4-font-size !important; // 1.5rem
+  font-size: config.$h4-font-size !important;
+  font-weight: config.$font-weight-bold !important;
+  line-height: 1.2 !important;
 }
 
 .h5 {
-  font-size: config.$h5-font-size !important; // 1.25rem
+  font-size: config.$h5-font-size !important;
+  font-weight: config.$font-weight-bold !important;
+  line-height: 1.2 !important;
 }
 
 .h6 {
-  font-size: config.$h6-font-size !important; // 1rem
+  font-size: config.$h6-font-size !important;
+  font-weight: config.$font-weight-bold !important;
+  line-height: 1.2 !important;
 }
 
+// Display font sizes (larger than headings)
+.display-1 {
+  font-size: 6rem !important;
+  font-weight: config.$font-weight-light !important;
+  line-height: 1.1 !important;
+}
+
+.display-2 {
+  font-size: 5.5rem !important;
+  font-weight: config.$font-weight-light !important;
+  line-height: 1.1 !important;
+}
+
+.display-3 {
+  font-size: 4.5rem !important;
+  font-weight: config.$font-weight-light !important;
+  line-height: 1.1 !important;
+}
+
+.display-4 {
+  font-size: 3.5rem !important;
+  font-weight: config.$font-weight-light !important;
+  line-height: 1.1 !important;
+}
+
+// Lead text utility
+.lead {
+  font-size: config.$font-size-lg !important;
+  font-weight: config.$font-weight-light !important;
+  line-height: 1.4 !important;
+}
+
+// Responsive font size utilities
+$breakpoints: (
+  sm: config.$breakpoint-sm,
+  md: config.$breakpoint-md,
+  lg: config.$breakpoint-lg,
+  xl: config.$breakpoint-xl
+);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .text-#{$breakpoint-name}-xs {
+      font-size: config.$font-size-xs !important;
+    }
+    
+    .text-#{$breakpoint-name}-sm {
+      font-size: config.$font-size-sm !important;
+    }
+    
+    .text-#{$breakpoint-name}-md {
+      font-size: config.$font-size-md !important;
+    }
+    
+    .text-#{$breakpoint-name}-lg {
+      font-size: config.$font-size-lg !important;
+    }
+    
+    .text-#{$breakpoint-name}-xl {
+      font-size: config.$font-size-xl !important;
+    }
+    
+    .text-#{$breakpoint-name}-xxl {
+      font-size: config.$font-size-xxl !important;
+    }
+    
+    .text-#{$breakpoint-name}-base {
+      font-size: config.$font-size-base !important;
+    }
+  }
+}
+
+// Responsive heading utilities
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .h1-#{$breakpoint-name} {
+      font-size: config.$h1-font-size !important;
+      font-weight: config.$font-weight-bold !important;
+      line-height: 1.2 !important;
+    }
+    
+    .h2-#{$breakpoint-name} {
+      font-size: config.$h2-font-size !important;
+      font-weight: config.$font-weight-bold !important;
+      line-height: 1.2 !important;
+    }
+    
+    .h3-#{$breakpoint-name} {
+      font-size: config.$h3-font-size !important;
+      font-weight: config.$font-weight-bold !important;
+      line-height: 1.2 !important;
+    }
+    
+    .h4-#{$breakpoint-name} {
+      font-size: config.$h4-font-size !important;
+      font-weight: config.$font-weight-bold !important;
+      line-height: 1.2 !important;
+    }
+    
+    .h5-#{$breakpoint-name} {
+      font-size: config.$h5-font-size !important;
+      font-weight: config.$font-weight-bold !important;
+      line-height: 1.2 !important;
+    }
+    
+    .h6-#{$breakpoint-name} {
+      font-size: config.$h6-font-size !important;
+      font-weight: config.$font-weight-bold !important;
+      line-height: 1.2 !important;
+    }
+  }
+}
+
+// Responsive display utilities
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .display-#{$breakpoint-name}-1 {
+      font-size: 6rem !important;
+      font-weight: config.$font-weight-light !important;
+      line-height: 1.1 !important;
+    }
+    
+    .display-#{$breakpoint-name}-2 {
+      font-size: 5.5rem !important;
+      font-weight: config.$font-weight-light !important;
+      line-height: 1.1 !important;
+    }
+    
+    .display-#{$breakpoint-name}-3 {
+      font-size: 4.5rem !important;
+      font-weight: config.$font-weight-light !important;
+      line-height: 1.1 !important;
+    }
+    
+    .display-#{$breakpoint-name}-4 {
+      font-size: 3.5rem !important;
+      font-weight: config.$font-weight-light !important;
+      line-height: 1.1 !important;
+    }
+  }
+}
+
+// Mobile-specific responsive scaling
+@media (max-width: #{config.$breakpoint-sm - 1px}) {
+  .display-1 {
+    font-size: 4.5rem !important;
+  }
+  
+  .display-2 {
+    font-size: 4rem !important;
+  }
+  
+  .display-3 {
+    font-size: 3rem !important;
+  }
+  
+  .display-4 {
+    font-size: 2.5rem !important;
+  }
+  
+  .h1,
+  h1 {
+    font-size: config.$h1-font-size * 0.85 !important;
+  }
+  
+  .h2,
+  h2 {
+    font-size: config.$h2-font-size * 0.85 !important;
+  }
+  
+  .h3,
+  h3 {
+    font-size: config.$h3-font-size * 0.9 !important;
+  }
+}

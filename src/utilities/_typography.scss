@@ -2,28 +2,28 @@
 // TYPOGRAPHY UTILITIES - Solomon's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables
-@import '../variables/config';
-@import '../variables/colors';
 
-// Step 2: Font weight utilities
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
+
+// Font weight utilities
 .font-light {
-  font-weight: 300 !important; // $font-weight-light
+  font-weight: config.$font-weight-light !important;
 }
 
 .font-normal {
-  font-weight: 400 !important; // $font-weight-normal
+  font-weight: config.$font-weight-normal !important;
 }
 
 .font-medium {
-  font-weight: 500 !important; // $font-weight-medium
+  font-weight: config.$font-weight-medium !important;
 }
 
 .font-bold {
-  font-weight: 700 !important; // $font-weight-bold
+  font-weight: config.$font-weight-bold !important;
 }
 
-// Step 3: Text transform utilities
+// Text transform utilities
 .text-lowercase {
   text-transform: lowercase !important;
 }
@@ -36,7 +36,7 @@
   text-transform: capitalize !important;
 }
 
-// Step 4: Text decoration utilities
+// Text decoration utilities
 .text-decoration-none {
   text-decoration: none !important;
 }
@@ -49,7 +49,7 @@
   text-decoration: line-through !important;
 }
 
-// Step 5: Text style utilities
+// Text style utilities
 .font-italic {
   font-style: italic !important;
 }
@@ -66,4 +66,83 @@
   overflow: hidden !important;
   text-overflow: ellipsis !important;
   white-space: nowrap !important;
+}
+
+// Line height utilities
+.lh-1 {
+  line-height: 1 !important;
+}
+
+.lh-sm {
+  line-height: 1.25 !important;
+}
+
+.lh-base {
+  line-height: config.$line-height-base !important;
+}
+
+.lh-lg {
+  line-height: 1.75 !important;
+}
+
+// Letter spacing utilities
+.ls-tight {
+  letter-spacing: -0.025em !important;
+}
+
+.ls-normal {
+  letter-spacing: 0 !important;
+}
+
+.ls-wide {
+  letter-spacing: 0.025em !important;
+}
+
+.ls-wider {
+  letter-spacing: 0.05em !important;
+}
+
+// Text alignment utilities
+.text-start {
+  text-align: left !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-justify {
+  text-align: justify !important;
+}
+
+// Responsive text alignment
+$breakpoints: (
+  sm: config.$breakpoint-sm,
+  md: config.$breakpoint-md,
+  lg: config.$breakpoint-lg,
+  xl: config.$breakpoint-xl
+);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .text-#{$breakpoint-name}-start {
+      text-align: left !important;
+    }
+    
+    .text-#{$breakpoint-name}-end {
+      text-align: right !important;
+    }
+    
+    .text-#{$breakpoint-name}-center {
+      text-align: center !important;
+    }
+    
+    .text-#{$breakpoint-name}-justify {
+      text-align: justify !important;
+    }
+  }
 }

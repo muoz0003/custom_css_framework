@@ -16,16 +16,18 @@ $dark-color: #343a40 !default;
 // Grayscale Colors
 // =============================================================================
 $white: #ffffff !default;
-$gray-100: #f8f9fa !default;
-$gray-200: #e9ecef !default;
-$gray-300: #dee2e6 !default;
-$gray-400: #ced4da !default;
-$gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
-$gray-700: #495057 !default;
-$gray-800: #343a40 !default;
-$gray-900: #212529 !default;
 $black: #000000 !default;
+
+$gray-50: #f9fafb !default;
+$gray-100: #f3f4f6 !default;
+$gray-200: #e5e7eb !default;
+$gray-300: #d1d5db !default;
+$gray-400: #9ca3af !default;
+$gray-500: #6b7280 !default;
+$gray-600: #4b5563 !default;
+$gray-700: #374151 !default;
+$gray-800: #1f2937 !default;
+$gray-900: #111827 !default;
 
 // Theme Colors Map
 // =============================================================================
@@ -42,14 +44,10 @@ $theme-colors: (
 
 // Text Colors
 // =============================================================================
-$text-color: $gray-900 !default;
-$text-muted: $gray-600 !default;
-$text-light: $gray-500 !default;
-
-// Background Colors
-// =============================================================================
+$body-color: $gray-900 !default;
 $body-bg: $white !default;
-$body-color: $text-color !default;
+$text-muted: $gray-600 !default;
+$text-color: $body-color !default;
 
 // Link Colors
 // =============================================================================

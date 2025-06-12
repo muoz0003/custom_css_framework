@@ -2,30 +2,34 @@
 // TEXT STYLING - Solomon's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables
-@import '../variables/config';
-@import '../variables/colors';
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
 
-// Step 2: Basic text element styles
+// Basic text element styles
 p {
-  margin-bottom: 1rem;
-  line-height: 1.5;
+  margin-bottom: config.$spacer;
+  line-height: config.$line-height-base;
 }
 
 a {
-  color: $primary-color;
+  color: colors.$primary-color;
   text-decoration: none;
   transition: color 0.3s ease;
 
   &:hover {
     text-decoration: underline;
-    color: darken($primary-color, 10%);
+    color: darken(colors.$primary-color, 10%);
+  }
+
+  &:focus {
+    outline: 2px solid colors.$primary-color;
+    outline-offset: 2px;
   }
 }
 
 strong,
 b {
-  font-weight: $font-weight-bold;
+  font-weight: config.$font-weight-bold;
 }
 
 em,
@@ -34,26 +38,29 @@ i {
 }
 
 small {
-  font-size: 0.875em;
+  font-size: config.$font-size-sm;
 }
 
 mark {
-  background-color: $warning-color;
-  color: #000;
+  background-color: colors.$warning-color;
+  color: colors.$black;
   padding: 0.1em 0.3em;
+  border-radius: config.$border-radius-sm;
 }
 
 del,
 s {
   text-decoration: line-through;
+  color: colors.$text-muted;
 }
 
 ins,
 u {
   text-decoration: underline;
+  text-decoration-color: colors.$success-color;
 }
 
-// Step 3: Text alignment utility classes
+// Text alignment utility classes
 .text-left {
   text-align: left !important;
 }
@@ -70,36 +77,57 @@ u {
   text-align: justify !important;
 }
 
-// Step 4: Text color utility classes
+// Modern text alignment classes
+.text-start {
+  text-align: left !important;
+}
+
+.text-end {
+  text-align: right !important;
+}
+
+// Text color utility classes
 .text-primary {
-  color: $primary-color !important;
+  color: colors.$primary-color !important;
 }
 
 .text-secondary {
-  color: $secondary-color !important;
+  color: colors.$secondary-color !important;
 }
 
 .text-success {
-  color: $success-color !important;
+  color: colors.$success-color !important;
 }
 
 .text-danger {
-  color: $danger-color !important;
+  color: colors.$danger-color !important;
 }
 
 .text-warning {
-  color: $warning-color !important;
+  color: colors.$warning-color !important;
 }
 
 .text-info {
-  color: $info-color !important;
+  color: colors.$info-color !important;
 }
 
 .text-muted {
-  color: #6c757d !important; // You can also make this a variable if needed
+  color: colors.$text-muted !important;
 }
 
-// Step 5: Text transform utility classes
+.text-white {
+  color: colors.$white !important;
+}
+
+.text-black {
+  color: colors.$black !important;
+}
+
+.text-body {
+  color: colors.$body-color !important;
+}
+
+// Text transform utility classes
 .text-lowercase {
   text-transform: lowercase !important;
 }
@@ -112,7 +140,7 @@ u {
   text-transform: capitalize !important;
 }
 
-// Step 6: Text decoration utility classes
+// Text decoration utility classes
 .text-decoration-none {
   text-decoration: none !important;
 }
@@ -123,4 +151,206 @@ u {
 
 .text-decoration-line-through {
   text-decoration: line-through !important;
+}
+
+// Font weight utility classes
+.fw-light {
+  font-weight: config.$font-weight-light !important;
+}
+
+.fw-normal {
+  font-weight: config.$font-weight-normal !important;
+}
+
+.fw-medium {
+  font-weight: config.$font-weight-medium !important;
+}
+
+.fw-bold {
+  font-weight: config.$font-weight-bold !important;
+}
+
+// Font style utilities
+.fst-italic {
+  font-style: italic !important;
+}
+
+.fst-normal {
+  font-style: normal !important;
+}
+
+// Text wrap utilities
+.text-wrap {
+  white-space: normal !important;
+}
+
+.text-nowrap {
+  white-space: nowrap !important;
+}
+
+.text-break {
+  word-wrap: break-word !important;
+  word-break: break-word !important;
+}
+
+.text-truncate {
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+  white-space: nowrap !important;
+}
+
+// Line height utilities
+.lh-1 {
+  line-height: 1 !important;
+}
+
+.lh-sm {
+  line-height: 1.25 !important;
+}
+
+.lh-base {
+  line-height: config.$line-height-base !important;
+}
+
+.lh-lg {
+  line-height: 1.75 !important;
+}
+
+// Text selection utilities
+.user-select-all {
+  user-select: all !important;
+}
+
+.user-select-auto {
+  user-select: auto !important;
+}
+
+.user-select-none {
+  user-select: none !important;
+}
+
+// Responsive text alignment
+$breakpoints: (
+  sm: config.$breakpoint-sm,
+  md: config.$breakpoint-md,
+  lg: config.$breakpoint-lg,
+  xl: config.$breakpoint-xl
+);
+
+@each $breakpoint-name, $breakpoint-value in $breakpoints {
+  @media (min-width: $breakpoint-value) {
+    .text-#{$breakpoint-name}-start {
+      text-align: left !important;
+    }
+    
+    .text-#{$breakpoint-name}-end {
+      text-align: right !important;
+    }
+    
+    .text-#{$breakpoint-name}-center {
+      text-align: center !important;
+    }
+    
+    .text-#{$breakpoint-name}-justify {
+      text-align: justify !important;
+    }
+  }
+}
+
+// Accessibility improvements
+.sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.sr-only-focusable:focus {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: inherit !important;
+  margin: inherit !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+}
+
+// Text reset utility
+.text-reset {
+  color: inherit !important;
+  text-decoration: inherit !important;
+}
+
+// Link utilities
+.link-primary {
+  color: colors.$primary-color !important;
+  
+  &:hover,
+  &:focus {
+    color: darken(colors.$primary-color, 15%) !important;
+  }
+}
+
+.link-secondary {
+  color: colors.$secondary-color !important;
+  
+  &:hover,
+  &:focus {
+    color: darken(colors.$secondary-color, 15%) !important;
+  }
+}
+
+.link-success {
+  color: colors.$success-color !important;
+  
+  &:hover,
+  &:focus {
+    color: darken(colors.$success-color, 15%) !important;
+  }
+}
+
+.link-danger {
+  color: colors.$danger-color !important;
+  
+  &:hover,
+  &:focus {
+    color: darken(colors.$danger-color, 15%) !important;
+  }
+}
+
+.link-warning {
+  color: colors.$warning-color !important;
+  
+  &:hover,
+  &:focus {
+    color: darken(colors.$warning-color, 15%) !important;
+  }
+}
+
+.link-info {
+  color: colors.$info-color !important;
+  
+  &:hover,
+  &:focus {
+    color: darken(colors.$info-color, 15%) !important;
+  }
+}
+
+.link-underline {
+  text-decoration: underline !important;
+}
+
+.link-underline-hover {
+  text-decoration: none !important;
+  
+  &:hover,
+  &:focus {
+    text-decoration: underline !important;
+  }
 }

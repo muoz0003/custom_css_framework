@@ -2,77 +2,192 @@
 // TABLES STYLING - Chuhong's Responsibility
 // =============================================================================
 
-// Step 1: Import the variables (David will create these)
-// @import '../variables/config';
-// @import '../variables/colors';
 
-// Step 2: Style basic table elements
-// TODO: Add styles for:
-// - table (basic table styling)
-// - th, td (table headers and cells)
-// - Basic properties: padding, border, text-align
-// - Border-collapse for clean borders
+@use '../variables/config' as config;
+@use '../variables/colors' as colors;
 
-// Step 3: Create table variants
-// TODO: Add classes for:
-// - .table (base table class)
-// - .table-striped (alternating row colors)
-// - .table-bordered (borders around all cells)
-// - .table-hover (hover effect on rows)
-
-// Step 4: Create table sizes
-// TODO: Add classes for:
-// - .table-sm (smaller padding)
-// - .table-lg (larger padding)
-
-// Step 5: Create table colors
-// TODO: Add classes for:
-// - .table-primary (primary colored header)
-// - .table-secondary (secondary colored header)
-// - .table-success (success colored rows)
-// - .table-danger (danger colored rows)
-
-// Step 6: Style responsive tables
-// TODO: Add class for:
-// - .table-responsive (horizontal scroll on small screens)
-
-// Example structure:
-/*
-table,
-.table {
-  // Base table styles here
+// Base table styles
+table {
   width: 100%;
+  margin-bottom: config.$spacer;
+  color: colors.$body-color;
   border-collapse: collapse;
-  margin-bottom: 1rem;
 }
 
 th,
 td {
-  padding: 0.75rem;
-  border-top: 1px solid #dee2e6;
-  text-align: left;
+  padding: config.$table-cell-padding-y config.$table-cell-padding-x;
+  vertical-align: top;
+  border-top: config.$border-width solid colors.$table-border-color;
 }
 
-th {
-  background-color: #f8f9fa;
-  font-weight: bold;
-  border-bottom: 2px solid #dee2e6;
+thead th {
+  vertical-align: bottom;
+  border-bottom: (2 * config.$border-width) solid colors.$table-border-color;
+  background-color: colors.$table-head-bg;
+  color: colors.$table-head-color;
+  font-weight: config.$font-weight-bold;
 }
 
+tbody + tbody {
+  border-top: (2 * config.$border-width) solid colors.$table-border-color;
+}
+
+// Table variants
+.table {
+  width: 100%;
+  margin-bottom: config.$spacer;
+  color: colors.$body-color;
+  background-color: colors.$table-bg;
+
+  th,
+  td {
+    padding: config.$table-cell-padding-y config.$table-cell-padding-x;
+    vertical-align: top;
+    border-top: config.$border-width solid colors.$table-border-color;
+  }
+
+  thead th {
+    vertical-align: bottom;
+    border-bottom: (2 * config.$border-width) solid colors.$table-border-color;
+    background-color: colors.$table-head-bg;
+    color: colors.$table-head-color;
+    font-weight: config.$font-weight-bold;
+  }
+
+  tbody + tbody {
+    border-top: (2 * config.$border-width) solid colors.$table-border-color;
+  }
+}
+
+// Table modifiers
+.table-sm {
+  th,
+  td {
+    padding: config.$table-cell-padding-y-sm config.$table-cell-padding-x-sm;
+  }
+}
+
+.table-bordered {
+  border: config.$border-width solid colors.$table-border-color;
+
+  th,
+  td {
+    border: config.$border-width solid colors.$table-border-color;
+  }
+
+  thead {
+    th,
+    td {
+      border-bottom-width: 2 * config.$border-width;
+    }
+  }
+}
+
+.table-borderless {
+  th,
+  td,
+  thead th,
+  tbody + tbody {
+    border: 0;
+  }
+}
+
+// Table color variants
 .table-striped {
   tbody tr:nth-of-type(odd) {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: colors.$table-accent-bg;
   }
 }
 
 .table-hover {
   tbody tr:hover {
-    background-color: rgba(0, 0, 0, 0.075);
+    color: colors.$body-color;
+    background-color: colors.$table-hover-bg;
   }
 }
-*/
 
-// NOTES:
-// - Wait for David to create variables before using them
-// - Make sure tables are readable and well-organized
-// - Use consistent spacing and colors with the rest of the framework
+// Table responsive wrapper
+.table-responsive {
+  display: block;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+
+  .table {
+    margin-bottom: 0;
+  }
+}
+
+// Responsive table variants
+@each $breakpoint-name, $breakpoint-value in config.$breakpoints {
+  .table-responsive-#{$breakpoint-name} {
+    @media (max-width: #{$breakpoint-value - 1px}) {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+
+      .table {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+// Table context colors
+.table-primary {
+  background-color: colors.$alert-primary-bg;
+  border-color: colors.$alert-primary-border;
+}
+
+.table-secondary {
+  background-color: colors.$gray-200;
+  border-color: colors.$gray-300;
+}
+
+.table-success {
+  background-color: colors.$alert-success-bg;
+  border-color: colors.$alert-success-border;
+}
+
+.table-info {
+  background-color: colors.$alert-info-bg;
+  border-color: colors.$alert-info-border;
+}
+
+.table-warning {
+  background-color: colors.$alert-warning-bg;
+  border-color: colors.$alert-warning-border;
+}
+
+.table-danger {
+  background-color: colors.$alert-danger-bg;
+  border-color: colors.$alert-danger-border;
+}
+
+.table-light {
+  background-color: colors.$gray-100;
+  border-color: colors.$gray-200;
+}
+
+.table-dark {
+  color: colors.$white;
+  background-color: colors.$gray-800;
+  border-color: colors.$gray-700;
+
+  th,
+  td,
+  thead th {
+    border-color: colors.$gray-700;
+  }
+}
+
+// Table caption
+caption {
+  padding-top: config.$table-cell-padding-y;
+  padding-bottom: config.$table-cell-padding-y;
+  color: colors.$text-muted;
+  text-align: left;
+  caption-side: bottom;
+}
